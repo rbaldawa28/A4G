@@ -2,6 +2,7 @@ package com.example.petpicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     //correct
                     Toast.makeText(MainActivity.this,"Access Authorized",Toast.LENGTH_SHORT).show();
+                    openSecondActivity();
                 }else
                     //incorrect
                     Toast.makeText(MainActivity.this,"Unable to Authorize Access",Toast.LENGTH_SHORT).show();
@@ -37,4 +39,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void openSecondActivity(){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
 }
