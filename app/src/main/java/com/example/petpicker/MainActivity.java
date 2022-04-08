@@ -18,11 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
+        MaterialButton profilebtn = (MaterialButton) findViewById(R.id.editProfile);
 
-        //User and password is admin and admin
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        profilebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     openSecondActivity();

@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteY="248dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginbtn"
+        android:id="@+id/editProfile"
         android:layout_width="131sp"
         android:layout_height="58sp"
         android:layout_below="@id/Continue"
@@ -48,7 +48,24 @@
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="277dp"
         android:backgroundTint="#402243"
-        android:text="LOGIN"
+        android:text="Edit Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Continue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewPets"
+        android:layout_width="131sp"
+        android:layout_height="58sp"
+        android:layout_below="@id/Continue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#402243"
+        android:text="View Pet Options"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
