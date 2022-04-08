@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PetPicker</string>
+    <string-array name="regions">
+        <item>Northeast</item>
+        <item>South</item>
+        <item>Midwest</item>
+        <item>West Coast</item>
+        <item>Rockies</item>
+    </string-array>
 </resources>
