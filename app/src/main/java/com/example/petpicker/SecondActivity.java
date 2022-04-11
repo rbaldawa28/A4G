@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,7 +43,7 @@ public class SecondActivity extends AppCompatActivity{
         fish = findViewById(R.id.fish);
 
         sp = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
-
+        updateViews(sp);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,20 +67,23 @@ public class SecondActivity extends AppCompatActivity{
                 bFish = fish.isChecked();
 
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putString("name",nameStr);
-                editor.putInt("budget",budgetVal);
-                editor.putInt("age",ageVal);
-                editor.putInt("sqft",sqftVal);
-                editor.putInt("householdSize",householdSizeVal);
-                editor.putInt("time",timeVal);
-                editor.putBoolean("dog", bDog);
-                editor.putBoolean("cat", bCat);
-                editor.putBoolean("bird", bBird);
-                editor.putBoolean("hamster", bHamster);
-                editor.putBoolean("fish", bFish);
+                editor.putString("nameP",nameStr);
+                editor.putInt("budgetP",budgetVal);
+                editor.putInt("ageP",ageVal);
+                editor.putInt("sqftP",sqftVal);
+                editor.putInt("householdSizeP",householdSizeVal);
+                editor.putInt("timeP",timeVal);
+                editor.putBoolean("dogP", bDog);
+                editor.putBoolean("catP", bCat);
+                editor.putBoolean("birdP", bBird);
+                editor.putBoolean("hamsterP", bHamster);
+                editor.putBoolean("fishP", bFish);
                 editor.commit();
+
             }
         });
+
+
     }
 
     public void openFirstActivity(){
@@ -87,4 +91,7 @@ public class SecondActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+    public void updateViews(SharedPreferences sp) {
+        name.setText(sp.getString("nameP", ""));
+    }
 }
