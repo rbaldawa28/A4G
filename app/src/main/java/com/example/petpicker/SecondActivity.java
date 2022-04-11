@@ -42,6 +42,8 @@ public class SecondActivity extends AppCompatActivity{
         hamster = findViewById(R.id.hamster);
         fish = findViewById(R.id.fish);
 
+        name.setText(sp.getString("nameP",""));
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,12 +80,8 @@ public class SecondActivity extends AppCompatActivity{
     protected void onResume() {
         super.onResume();
 
-        // Fetching the stored data
-        // from the SharedPreference
         SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
-        // Setting the fetched data
-        // in the EditTexts
         name.setText(sp.getString("nameP",""));
     }
 
