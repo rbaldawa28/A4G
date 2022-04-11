@@ -101,10 +101,10 @@ public class SecondActivity extends AppCompatActivity{
 
         name.setText(sp.getString("nameP",""));
         age.setText(sp.getInt("ageP",0));
-        budget.setText(sp.getInt("budgetP",0));
-        sqft.setText(sp.getInt("sqftP",0));
-        householdSize.setText(sp.getInt("householdSizeP",0));
-        time.setText(sp.getInt("timeP",0));
+        budget.setText(Integer.toString(sp.getInt("budgetP",0)));
+        sqft.setText(Integer.toString(sp.getInt("sqftP",0)));
+        householdSize.setText(Integer.toString(sp.getInt("householdSizeP",0)));
+        time.setText(Integer.toString(sp.getInt("timeP",0)));
         dog.setChecked(sp.getBoolean("dogP",false));
         cat.setChecked(sp.getBoolean("catP",false));
         bird.setChecked(sp.getBoolean("birdP",false));
