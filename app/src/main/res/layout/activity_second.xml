@@ -24,11 +24,12 @@
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="136dp"
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:ems="10"
         android:hint="Enter Your Name"
+        android:inputType="text"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
@@ -71,42 +72,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/Snake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:text="Snake"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/Bird"
+        android:id="@+id/bird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
         android:text="Bird"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/hamster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="Hamster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/Hamster"
+        android:id="@+id/fish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
-        android:text="Hamster"
+        android:text="Fish"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/budget"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="308dp"
         android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:ems="8"
@@ -121,7 +122,7 @@
     <EditText
         android:id="@+id/age"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="308dp"
         android:ems="8"
         android:hint="Current Age"
@@ -135,7 +136,7 @@
     <EditText
         android:id="@+id/size"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="352dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
@@ -162,9 +163,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Q2"
+        android:id="@+id/timeQuestion"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="430dp"
         android:text="How much time do you spend at work/school per week?"
         android:textColor="@color/black"
@@ -177,7 +178,7 @@
     <EditText
         android:id="@+id/timeAtHome"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="430dp"
         android:ems="6"
         android:hint="Time"
@@ -190,20 +191,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/Submit"
+        android:id="@+id/submit"
         android:layout_width="131sp"
         android:layout_height="58sp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="109dp"
         android:layout_marginEnd="140dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="148dp"
         android:backgroundTint="#402243"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        android:layout_width="131sp"
+        android:layout_height="58sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#402243"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

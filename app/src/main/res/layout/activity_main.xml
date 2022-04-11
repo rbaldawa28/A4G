@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/welcome"
         android:gravity="center"
-        android:text="Click the button to begin."
+        android:text="Find the Pet For You."
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
