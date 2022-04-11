@@ -100,11 +100,11 @@ public class SecondActivity extends AppCompatActivity{
         SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
         name.setText(sp.getString("nameP",""));
-        age.setText(sp.getString("ageP",""));
-        budget.setText(sp.getString("budgetP",""));
-        sqft.setText(sp.getString("sqftP",""));
-        householdSize.setText(sp.getString("householdSizeP",""));
-        time.setText(sp.getString("timeP",""));
+        age.setText(sp.getInt("ageP",0));
+        budget.setText(sp.getInt("budgetP",0));
+        sqft.setText(sp.getInt("sqftP",0));
+        householdSize.setText(sp.getInt("householdSizeP",0));
+        time.setText(sp.getInt("timeP",0));
         dog.setChecked(sp.getBoolean("dogP",false));
         cat.setChecked(sp.getBoolean("catP",false));
         bird.setChecked(sp.getBoolean("birdP",false));
