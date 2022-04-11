@@ -42,9 +42,6 @@ public class SecondActivity extends AppCompatActivity{
         hamster = findViewById(R.id.hamster);
         fish = findViewById(R.id.fish);
 
-        name.setText(sp.getString("nameP",""));
-
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,17 +55,37 @@ public class SecondActivity extends AppCompatActivity{
                 SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("nameP",name.getText().toString());
+                editor.commit();
+
                 editor.putInt("budgetP",Integer.parseInt(budget.getText().toString()));
+                editor.commit();
+
                 editor.putInt("ageP",Integer.parseInt(age.getText().toString()));
+                editor.commit();
+
                 editor.putInt("sqftP",Integer.parseInt(sqft.getText().toString()));
+                editor.commit();
+
                 editor.putInt("householdSizeP",Integer.parseInt(householdSize.getText().toString()));
+                editor.commit();
+
                 editor.putInt("timeP",Integer.parseInt(time.getText().toString()));
+                editor.commit();
+
                 editor.putBoolean("dogP", dog.isChecked());
+                editor.commit();
+
                 editor.putBoolean("catP", cat.isChecked());
+                editor.commit();
+
                 editor.putBoolean("birdP", bird.isChecked());
+                editor.commit();
+
                 editor.putBoolean("hamsterP", hamster.isChecked());
+                editor.commit();
+
                 editor.putBoolean("fishP", fish.isChecked());
-                editor.apply();
+                editor.commit();
 
             }
         });
@@ -83,6 +100,17 @@ public class SecondActivity extends AppCompatActivity{
         SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
         name.setText(sp.getString("nameP",""));
+        age.setText(sp.getString("ageP",""));
+        budget.setText(sp.getString("budgetP",""));
+        sqft.setText(sp.getString("sqftP",""));
+        householdSize.setText(sp.getString("householdSizeP",""));
+        time.setText(sp.getString("timeP",""));
+        dog.setChecked(sp.getBoolean("dogP",false));
+        cat.setChecked(sp.getBoolean("catP",false));
+        bird.setChecked(sp.getBoolean("birdP",false));
+        hamster.setChecked(sp.getBoolean("hamsterP",false));
+        fish.setChecked(sp.getBoolean("fishP",false));
+
     }
 
     public void openFirstActivity(){
