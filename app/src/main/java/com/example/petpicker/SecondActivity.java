@@ -42,8 +42,7 @@ public class SecondActivity extends AppCompatActivity{
         hamster = findViewById(R.id.hamster);
         fish = findViewById(R.id.fish);
 
-        sp = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
-        updateViews(sp);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,31 +53,20 @@ public class SecondActivity extends AppCompatActivity{
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nameStr = name.getText().toString();
-                budgetVal = Integer.parseInt(budget.getText().toString());
-                ageVal = Integer.parseInt(age.getText().toString());
-                sqftVal = Integer.parseInt(sqft.getText().toString());
-                householdSizeVal = Integer.parseInt(householdSize.getText().toString());
-                timeVal = Integer.parseInt(time.getText().toString());
-                bDog = dog.isChecked();
-                bCat = cat.isChecked();
-                bBird = bird.isChecked();
-                bHamster = hamster.isChecked();
-                bFish = fish.isChecked();
-
+                SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putString("nameP",nameStr);
-                editor.putInt("budgetP",budgetVal);
-                editor.putInt("ageP",ageVal);
-                editor.putInt("sqftP",sqftVal);
-                editor.putInt("householdSizeP",householdSizeVal);
-                editor.putInt("timeP",timeVal);
-                editor.putBoolean("dogP", bDog);
-                editor.putBoolean("catP", bCat);
-                editor.putBoolean("birdP", bBird);
-                editor.putBoolean("hamsterP", bHamster);
-                editor.putBoolean("fishP", bFish);
-                editor.commit();
+                editor.putString("nameP",name.getText().toString());
+                editor.putInt("budgetP",Integer.parseInt(budget.getText().toString()));
+                editor.putInt("ageP",Integer.parseInt(age.getText().toString()));
+                editor.putInt("sqftP",Integer.parseInt(sqft.getText().toString()));
+                editor.putInt("householdSizeP",Integer.parseInt(householdSize.getText().toString()));
+                editor.putInt("timeP",Integer.parseInt(time.getText().toString()));
+                editor.putBoolean("dogP", dog.isChecked());
+                editor.putBoolean("catP", cat.isChecked());
+                editor.putBoolean("birdP", bird.isChecked());
+                editor.putBoolean("hamsterP", hamster.isChecked());
+                editor.putBoolean("fishP", fish.isChecked());
+                editor.apply();
 
             }
         });
@@ -86,12 +74,22 @@ public class SecondActivity extends AppCompatActivity{
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Fetching the stored data
+        // from the SharedPreference
+        SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+
+        // Setting the fetched data
+        // in the EditTexts
+        name.setText(sp.getString("nameP",""));
+    }
+
     public void openFirstActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void updateViews(SharedPreferences sp) {
-        name.setText(sp.getString("nameP", ""));
-    }
 }
