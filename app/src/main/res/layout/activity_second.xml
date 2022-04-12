@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondActivity"
-    android:background="@drawable/background">
+    android:background="#F3F6FB">
 
     <TextView
         android:id="@+id/title"
@@ -13,19 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="Profile Info"
+        android:text="@string/title"
         android:textColor="@color/white"
         android:textSize="28sp" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_height="48dp"
         android:layout_below="@id/title"
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:ems="10"
-        android:hint="Enter Your Name"
+        android:hint="@string/name"
         android:inputType="text"
         android:textColorHint="@color/black" />
 
@@ -34,10 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/name"
-        android:text="What pets are you interested in?"
+        android:text="@string/pets"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"/>
 
     <CheckBox
@@ -45,49 +45,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Dog"
+        android:text="@string/dog"
         android:layout_below="@id/pets"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginStart="10dp"/>
 
     <CheckBox
         android:id="@+id/cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Cat"
+        android:text="@string/cat"
         android:layout_below="@id/pets"
-        android:layout_toRightOf="@id/dog"
-        android:layout_marginLeft="10dp"/>
+        android:layout_toEndOf="@id/dog"
+        android:layout_marginStart="10dp"/>
 
     <CheckBox
         android:id="@+id/bird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Bird"
+        android:text="@string/bird"
         android:layout_below="@id/pets"
-        android:layout_toRightOf="@id/cat"
-        android:layout_marginLeft="10dp"/>
+        android:layout_toEndOf="@id/cat"
+        android:layout_marginStart="10dp"/>
 
     <CheckBox
         android:id="@+id/hamster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Hamster"
+        android:text="@string/hamster"
         android:layout_below="@id/pets"
-        android:layout_toRightOf="@id/bird"
-        android:layout_marginLeft="10dp"/>
+        android:layout_toEndOf="@id/bird"
+        android:layout_marginStart="10dp"/>
 
     <CheckBox
         android:id="@+id/fish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Fish"
+        android:text="@string/fish"
         android:layout_below="@id/pets"
-        android:layout_toRightOf="@id/hamster"
-        android:layout_marginLeft="10dp"/>
+        android:layout_toEndOf="@id/hamster"
+        android:layout_marginStart="10dp"/>
 
     <EditText
         android:id="@+id/budget"
@@ -95,10 +95,10 @@
         android:layout_height="48dp"
         android:layout_below="@id/dog"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:ems="8"
-        android:hint="Monthly Budget"
+        android:hint="@string/budget"
         android:inputType="number"
         android:textColorHint="@color/black" />
 
@@ -107,12 +107,12 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_below="@id/dog"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:ems="8"
-        android:hint="Current Age"
+        android:hint="@string/age"
         android:inputType="number"
         android:textColorHint="@color/black" />
 
@@ -122,10 +122,10 @@
         android:layout_height="48dp"
         android:layout_below="@id/budget"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
-        android:hint="House Sq. Ft."
+        android:hint="@string/sqft"
         android:inputType="number"
         android:textColorHint="@color/black"/>
 
@@ -135,11 +135,11 @@
         android:layout_height="48dp"
         android:layout_below="@id/budget"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
-        android:hint="Household Size"
+        android:hint="@string/householdSize"
         android:inputType="number"
         android:textColorHint="@color/black"/>
 
@@ -147,10 +147,10 @@
         android:id="@+id/timeQuestion"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/sqft"
-        android:text="How much time do you spend at work/school per week?"
+        android:text="@string/timeAtHome"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -160,9 +160,9 @@
         android:layout_height="48dp"
         android:layout_below="@id/sqft"
         android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/timeQuestion"
+        android:layout_toEndOf="@id/timeQuestion"
         android:ems="6"
-        android:hint="Time"
+        android:hint="@string/time"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:inputType="number"
         android:textColorHint="@color/black"
@@ -176,7 +176,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/timeQuestion"
         android:backgroundTint="#402243"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textColor="@color/white"/>
 
     <com.google.android.material.button.MaterialButton
@@ -187,7 +187,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/submit"
         android:backgroundTint="#402243"
-        android:text="Back"
+        android:text="@string/back"
         android:textColor="@color/white"/>
 
 
