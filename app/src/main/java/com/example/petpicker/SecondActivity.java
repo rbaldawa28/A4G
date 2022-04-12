@@ -85,7 +85,7 @@ public class SecondActivity extends AppCompatActivity{
                 editor.commit();
 
                 editor.putBoolean("fishP", fish.isChecked());
-                editor.commit();
+                editor.apply();
 
             }
         });
@@ -100,7 +100,7 @@ public class SecondActivity extends AppCompatActivity{
         SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
         name.setText(sp.getString("nameP",""));
-        age.setText(sp.getInt("ageP",0));
+        /*age.setText(sp.getInt("ageP",0));
         budget.setText(Integer.toString(sp.getInt("budgetP",0)));
         sqft.setText(Integer.toString(sp.getInt("sqftP",0)));
         householdSize.setText(Integer.toString(sp.getInt("householdSizeP",0)));
@@ -109,7 +109,7 @@ public class SecondActivity extends AppCompatActivity{
         cat.setChecked(sp.getBoolean("catP",false));
         bird.setChecked(sp.getBoolean("birdP",false));
         hamster.setChecked(sp.getBoolean("hamsterP",false));
-        fish.setChecked(sp.getBoolean("fishP",false));
+        fish.setChecked(sp.getBoolean("fishP",false));*/
 
     }
 
