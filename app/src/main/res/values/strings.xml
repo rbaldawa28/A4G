@@ -1,10 +1,30 @@
 <resources>
     <string name="app_name">PetPicker</string>
+    <string name="name">Enter your name</string>
+    <string name="title">Customize Profile</string>
+    <string name="pets">What pets are you interested in?</string>
+    <string name="fish">Fish</string>
+    <string name="dog">Dog</string>
+    <string name="cat">Cat</string>
+    <string name="snake">Snake</string>
+    <string name="hamster">Hamster</string>
+    <string name="bird">Bird</string>
+    <string name="budget">Monthly Pet Budget</string>
+    <string name="householdSize">Number of Household Members</string>
+    <string name="size">House Sq. Ft.</string>
+    <string name="age">Current Age</string>
+    <string name="timeAtHome">How much time do you spend at work/school per week?</string>
+    <string name="time">Time (hrs)</string>
+    <string name="submit">SUBMIT</string>
+
+    <string name="about">About Our App</string>
+
     <string-array name="regions">
         <item>Northeast</item>
         <item>South</item>
         <item>Midwest</item>
         <item>West Coast</item>
         <item>Rockies</item>
+
     </string-array>
 </resources>
