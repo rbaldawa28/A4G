@@ -176,7 +176,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/timeQuestion"
         android:backgroundTint="#402243"
-        android:text="Submit" />
+        android:text="Submit"
+        android:textColor="@color/white"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
@@ -186,7 +187,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/submit"
         android:backgroundTint="#402243"
-        android:text="Back" />
+        android:text="Back"
+        android:textColor="@color/white"/>
 
 
 </android.widget.RelativeLayout>

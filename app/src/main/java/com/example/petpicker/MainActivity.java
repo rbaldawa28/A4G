@@ -18,9 +18,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MaterialButton petbtn = (MaterialButton) findViewById(R.id.viewPets);
+        petbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openThirdActivity();
+            }
+        });
+
         MaterialButton profilebtn = (MaterialButton) findViewById(R.id.editProfile);
-
-
         profilebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openSecondActivity(){
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    public void openThirdActivity(){
+        Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
     }
 }
