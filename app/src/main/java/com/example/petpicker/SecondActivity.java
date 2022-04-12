@@ -31,7 +31,7 @@ public class SecondActivity extends AppCompatActivity{
         name = findViewById(R.id.name);
         budget = findViewById(R.id.budget);
         age = findViewById(R.id.age);
-        sqft = findViewById(R.id.size);
+        sqft = findViewById(R.id.sqft);
         householdSize = findViewById(R.id.householdSize);
         time = findViewById(R.id.timeAtHome);
         submit = findViewById(R.id.submit);
@@ -55,37 +55,17 @@ public class SecondActivity extends AppCompatActivity{
                 SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("nameP",name.getText().toString());
-                editor.commit();
-
                 editor.putInt("budgetP",Integer.parseInt(budget.getText().toString()));
-                editor.commit();
-
                 editor.putInt("ageP",Integer.parseInt(age.getText().toString()));
-                editor.commit();
-
                 editor.putInt("sqftP",Integer.parseInt(sqft.getText().toString()));
-                editor.commit();
-
                 editor.putInt("householdSizeP",Integer.parseInt(householdSize.getText().toString()));
-                editor.commit();
-
                 editor.putInt("timeP",Integer.parseInt(time.getText().toString()));
-                editor.commit();
-
                 editor.putBoolean("dogP", dog.isChecked());
-                editor.commit();
-
                 editor.putBoolean("catP", cat.isChecked());
-                editor.commit();
-
                 editor.putBoolean("birdP", bird.isChecked());
-                editor.commit();
-
                 editor.putBoolean("hamsterP", hamster.isChecked());
-                editor.commit();
-
                 editor.putBoolean("fishP", fish.isChecked());
-                editor.apply();
+                editor.commit();
 
             }
         });
@@ -100,16 +80,16 @@ public class SecondActivity extends AppCompatActivity{
         SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
         name.setText(sp.getString("nameP",""));
-        /*age.setText(sp.getInt("ageP",0));
-        budget.setText(Integer.toString(sp.getInt("budgetP",0)));
-        sqft.setText(Integer.toString(sp.getInt("sqftP",0)));
-        householdSize.setText(Integer.toString(sp.getInt("householdSizeP",0)));
-        time.setText(Integer.toString(sp.getInt("timeP",0)));
+        age.setText(String.valueOf(sp.getInt("ageP",0)));
+        budget.setText(String.valueOf(sp.getInt("budgetP",0)));
+        sqft.setText(String.valueOf(sp.getInt("sqftP",0)));
+        householdSize.setText(String.valueOf(sp.getInt("householdSizeP",0)));
+        time.setText(String.valueOf(sp.getInt("timeP",0)));
         dog.setChecked(sp.getBoolean("dogP",false));
         cat.setChecked(sp.getBoolean("catP",false));
         bird.setChecked(sp.getBoolean("birdP",false));
         hamster.setChecked(sp.getBoolean("hamsterP",false));
-        fish.setChecked(sp.getBoolean("fishP",false));*/
+        fish.setChecked(sp.getBoolean("fishP",false));
 
     }
 
