@@ -1,11 +1,14 @@
 package com.example.petpicker;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.util.*;
 
@@ -17,6 +20,14 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+
+        MaterialButton back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFirstActivity();
+            }
+        });
 
         pet = findViewById(R.id.bestChoice);
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
@@ -151,5 +162,10 @@ public class ThirdActivity extends AppCompatActivity {
         }
 
         pet.setText(pets.get(scores.indexOf(Collections.max(scores))));
+    }
+
+    public void openFirstActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

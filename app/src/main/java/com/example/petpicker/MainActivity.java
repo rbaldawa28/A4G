@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         MaterialButton profilebtn = (MaterialButton) findViewById(R.id.editProfile);
         profilebtn.setOnClickListener(new View.OnClickListener() {
             @Override
