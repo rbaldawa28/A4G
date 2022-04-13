@@ -33,7 +33,7 @@ public class ThirdActivity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
 
         ArrayList<String> pets = new ArrayList<String>(Arrays.asList("Dog","Cat","Bird","Hamster","Fish"));
-        ArrayList<Double> scores = new ArrayList<Double>(Arrays.asList(0.0,0.0,0.0,0.0,0.0));
+        ArrayList<Double> scores = new ArrayList<Double>(Arrays.asList(0.5,0.4,0.3,0.2,0.1));
 
         if(sp.getInt("budgetP",0) >= 100)
         {
