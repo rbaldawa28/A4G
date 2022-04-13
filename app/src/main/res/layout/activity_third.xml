@@ -5,6 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ThirdActivity"
-    android:background="@drawable/background">
+    android:background="#D6BBC0">
+
+    <TextView
+        android:id="@+id/pet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_centerHorizontal="true"
+        android:text="The Pet for You is"
+        android:textColor="#242038"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/bestChoice"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/pet"
+        android:ems="16"
+        android:inputType="text"
+        android:textColorHint="@color/black" />
 
 </android.widget.RelativeLayout>

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton petbtn = (MaterialButton) findViewById(R.id.viewPets);
         petbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 openThirdActivity();
             }
         });

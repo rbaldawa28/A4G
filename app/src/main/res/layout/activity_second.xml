@@ -5,22 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondActivity"
-    android:background="#F3F6FB">
+    android:background="#D6BBC0">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
+        android:fontFamily="monospace"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:text="@string/title"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="28sp" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
         android:layout_height="48dp"
         android:layout_below="@id/title"
         android:drawableStart="@drawable/ic_baseline_person_24"
@@ -91,10 +93,10 @@
 
     <EditText
         android:id="@+id/budget"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_below="@id/dog"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
         android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:ems="8"
@@ -104,12 +106,12 @@
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_below="@id/dog"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_below="@id/sqft"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:ems="8"
         android:hint="@string/age"
@@ -118,7 +120,7 @@
 
     <EditText
         android:id="@+id/sqft"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_below="@id/budget"
         android:layout_marginTop="10dp"
@@ -131,12 +133,12 @@
 
     <EditText
         android:id="@+id/householdSize"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_below="@id/budget"
+        android:layout_below="@id/age"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentStart="true"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
         android:hint="@string/householdSize"
@@ -149,7 +151,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/sqft"
+        android:layout_below="@id/householdSize"
         android:text="@string/timeAtHome"
         android:textColor="@color/black"
         android:textSize="18sp" />
@@ -158,7 +160,7 @@
         android:id="@+id/timeAtHome"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_below="@id/sqft"
+        android:layout_below="@id/householdSize"
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@id/timeQuestion"
         android:ems="6"
@@ -172,20 +174,21 @@
         android:id="@+id/submit"
         android:layout_width="131sp"
         android:layout_height="58sp"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/timeQuestion"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#402243"
         android:text="@string/submit"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
         android:layout_width="131sp"
         android:layout_height="58sp"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/submit"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/timeQuestion"
         android:backgroundTint="#402243"
         android:text="@string/back"
         android:textColor="@color/white"/>
