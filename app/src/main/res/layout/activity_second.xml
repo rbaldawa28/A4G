@@ -1,197 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity"
-    android:background="#D6BBC0">
+    android:background="#D6BBC0"
+    tools:context=".SecondActivity">
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:fontFamily="monospace"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
         android:text="@string/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:textColor="@color/black"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/title"
+        android:layout_marginBottom="20dp"
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:ems="10"
         android:hint="@string/name"
         android:inputType="text"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/pets"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:layout_conversion_absoluteHeight="48dp" />
 
     <TextView
         android:id="@+id/pets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="206dp"
         android:text="@string/pets"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/dog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:text="@string/dog"
-        android:layout_below="@id/pets"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintBaseline_toBaselineOf="@+id/cat"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="@string/cat"
-        android:layout_below="@id/pets"
-        android:layout_toEndOf="@id/dog"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@+id/dog"
+        app:layout_constraintTop_toBottomOf="@+id/pets" />
 
     <CheckBox
         android:id="@+id/bird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:text="@string/bird"
-        android:layout_below="@id/pets"
-        android:layout_toEndOf="@id/cat"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintBaseline_toBaselineOf="@+id/cat"
+        app:layout_constraintStart_toEndOf="@+id/cat" />
 
     <CheckBox
         android:id="@+id/hamster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:text="@string/hamster"
-        android:layout_below="@id/pets"
-        android:layout_toEndOf="@id/bird"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@+id/bird"
+        app:layout_constraintTop_toTopOf="@+id/bird" />
 
     <CheckBox
         android:id="@+id/fish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:text="@string/fish"
-        android:layout_below="@id/pets"
-        android:layout_toEndOf="@id/hamster"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintBaseline_toBaselineOf="@+id/hamster"
+        app:layout_constraintStart_toEndOf="@+id/hamster" />
+
+    <TextView
+        android:id="@+id/budgetQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="306dp"
+        android:text="What is your monthly budget?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/budget"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_below="@id/dog"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="58dp"
         android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:ems="8"
         android:hint="@string/budget"
         android:inputType="number"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/sqft"
+        app:layout_constraintEnd_toEndOf="@+id/sqft"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sqft"
+        app:layout_constraintTop_toTopOf="@+id/budgetQuestion"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="300dp" />
+
+    <TextView
+        android:id="@+id/sqftQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="396dp"
+        android:text="What is your liveable square footage?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_below="@id/sqft"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="58dp"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:ems="8"
         android:hint="@string/age"
         android:inputType="number"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/householdSize"
+        app:layout_constraintEnd_toEndOf="@+id/householdSize"
+        app:layout_constraintStart_toStartOf="@+id/householdSize"
+        app:layout_constraintTop_toTopOf="@+id/sqft"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="300dp" />
 
     <EditText
         android:id="@+id/sqft"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_below="@id/budget"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="116dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
         android:hint="@string/sqft"
         android:inputType="number"
-        android:textColorHint="@color/black"/>
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/householdSize"
+        app:layout_constraintEnd_toEndOf="@+id/age"
+        app:layout_constraintStart_toStartOf="@+id/age"
+        app:layout_constraintTop_toTopOf="@+id/budget"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="300dp" />
 
     <EditText
         android:id="@+id/householdSize"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_below="@id/age"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
-        android:layout_alignParentStart="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="118dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
         android:hint="@string/householdSize"
         android:inputType="number"
-        android:textColorHint="@color/black"/>
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="@+id/fish"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="300dp" />
 
     <TextView
         android:id="@+id/timeQuestion"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/householdSize"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="@string/timeAtHome"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/timeAtHome"
+        app:layout_constraintEnd_toStartOf="@+id/timeAtHome"
+        app:layout_constraintStart_toStartOf="@+id/dog"
+        app:layout_constraintTop_toTopOf="@+id/timeAtHome"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="250dp" />
 
     <EditText
         android:id="@+id/timeAtHome"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_below="@id/householdSize"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@id/timeQuestion"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
+        android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:ems="6"
         android:hint="@string/time"
-        android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:inputType="number"
         android:textColorHint="@color/black"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/householdSize"
+        tools:layout_conversion_absoluteHeight="48dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/submit"
         android:layout_width="131sp"
-        android:layout_height="58sp"
-        android:layout_below="@id/timeQuestion"
+        android:layout_height="0dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
         android:backgroundTint="#402243"
         android:text="@string/submit"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        tools:layout_conversion_absoluteHeight="58dp"
+        tools:layout_conversion_absoluteWidth="131dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
-        android:layout_width="131sp"
+        android:layout_width="0dp"
         android:layout_height="58sp"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_below="@id/timeQuestion"
+        android:layout_marginBottom="195dp"
         android:backgroundTint="#402243"
         android:text="@string/back"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        tools:layout_conversion_absoluteHeight="58dp"
+        tools:layout_conversion_absoluteWidth="131dp" />
 
 
-</android.widget.RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

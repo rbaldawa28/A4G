@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdActivity"
-    android:background="#D6BBC0">
+    android:background="#D6BBC0"
+    tools:context=".ThirdActivity">
 
     <TextView
         android:id="@+id/pet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="30dp"
         android:text="The Pet for You is"
         android:textColor="#242038"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bestChoice"
+        app:layout_constraintEnd_toEndOf="@+id/bestChoice"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/bestChoice"
         android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/pet"
+        android:layout_height="0dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="50dp"
         android:ems="16"
         android:inputType="text"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
-        android:layout_width="131sp"
-        android:layout_height="58sp"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="30dp"
-        android:layout_below="@id/bestChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="548dp"
         android:backgroundTint="#402243"
         android:text="@string/back"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bestChoice" />
 
-</android.widget.RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
