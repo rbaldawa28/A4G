@@ -28,8 +28,6 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-
-
         pet = findViewById(R.id.firstChoice);
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
 
@@ -161,6 +159,7 @@ public class ThirdActivity extends AppCompatActivity {
         {
             scores.set(4, 0.0);
         }
+
 
         pet.setText(pets.get(scores.indexOf(Collections.max(scores))));
     }
