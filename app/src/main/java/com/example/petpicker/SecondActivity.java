@@ -24,6 +24,11 @@ public class SecondActivity extends AppCompatActivity{
     int budgetVal, ageVal, sqftVal, householdSizeVal, timeVal;
     boolean bDog, bCat, bBird, bHamster, bFish;
 
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
@@ -35,19 +40,13 @@ public class SecondActivity extends AppCompatActivity{
         householdSize = findViewById(R.id.householdSize);
         time = findViewById(R.id.timeAtHome);
         submit = findViewById(R.id.submit);
-        back = findViewById(R.id.back);
         dog = findViewById(R.id.dog);
         cat = findViewById(R.id.cat);
         bird = findViewById(R.id.bird);
         hamster = findViewById(R.id.hamster);
         fish = findViewById(R.id.fish);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openFirstActivity();
-            }
-        });
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +65,8 @@ public class SecondActivity extends AppCompatActivity{
                 editor.putBoolean("hamsterP", hamster.isChecked());
                 editor.putBoolean("fishP", fish.isChecked());
                 editor.commit();
-
+                Toast toast = Toast.makeText(getApplicationContext(), "Profile Saved", Toast.LENGTH_LONG);
+                toast.show();
             }
         });
 
@@ -91,11 +91,6 @@ public class SecondActivity extends AppCompatActivity{
         hamster.setChecked(sp.getBoolean("hamsterP",false));
         fish.setChecked(sp.getBoolean("fishP",false));
 
-    }
-
-    public void openFirstActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
 }

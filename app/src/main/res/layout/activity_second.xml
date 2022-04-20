@@ -32,7 +32,6 @@
         android:hint="@string/name"
         android:inputType="text"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/pets"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:layout_conversion_absoluteHeight="48dp" />
@@ -46,6 +45,7 @@
         android:text="@string/pets"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,10 +97,10 @@
 
     <TextView
         android:id="@+id/budgetQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="306dp"
+        android:layout_marginTop="300dp"
         android:text="What is your monthly budget?"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -109,150 +109,128 @@
 
     <EditText
         android:id="@+id/budget"
-        android:layout_width="0dp"
+        android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="58dp"
         android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:ems="8"
         android:hint="@string/budget"
         android:inputType="number"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/sqft"
-        app:layout_constraintEnd_toEndOf="@+id/sqft"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sqft"
-        app:layout_constraintTop_toTopOf="@+id/budgetQuestion"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="300dp" />
+        app:layout_constraintStart_toEndOf="@+id/budgetQuestion"
+        app:layout_constraintBaseline_toBaselineOf="@+id/budgetQuestion" />
 
     <TextView
         android:id="@+id/sqftQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="396dp"
-        android:text="What is your liveable square footage?"
+        android:layout_marginTop="350dp"
+        android:text="What is your liveable sqft?"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginBottom="58dp"
-        android:drawableStart="@drawable/ic_baseline_access_alarm_24"
-        android:ems="8"
-        android:hint="@string/age"
-        android:inputType="number"
-        android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/householdSize"
-        app:layout_constraintEnd_toEndOf="@+id/householdSize"
-        app:layout_constraintStart_toStartOf="@+id/householdSize"
-        app:layout_constraintTop_toTopOf="@+id/sqft"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="300dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/sqft"
-        android:layout_width="0dp"
+        android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginBottom="116dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
         android:hint="@string/sqft"
         android:inputType="number"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/householdSize"
-        app:layout_constraintEnd_toEndOf="@+id/age"
-        app:layout_constraintStart_toStartOf="@+id/age"
-        app:layout_constraintTop_toTopOf="@+id/budget"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="300dp" />
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sqftQuestion"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sqftQuestion" />
+
+    <TextView
+        android:id="@+id/ageQuestion"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="400dp"
+        android:text="What is your current age?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:drawableStart="@drawable/ic_baseline_access_alarm_24"
+        android:ems="8"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/ageQuestion"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ageQuestion" />
+
+    <TextView
+        android:id="@+id/sizeQuestion"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="450dp"
+        android:text="How many people live in your household?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/householdSize"
-        android:layout_width="0dp"
+        android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="118dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
         android:hint="@string/householdSize"
         android:inputType="number"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
-        app:layout_constraintEnd_toEndOf="@+id/fish"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="300dp" />
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sizeQuestion"
+        app:layout_constraintBottom_toBottomOf="@id/sizeQuestion" />
 
     <TextView
         android:id="@+id/timeQuestion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/timeAtHome"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="510dp"
+        android:text="How much time do you spend at work per week?"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/timeAtHome"
-        app:layout_constraintEnd_toStartOf="@+id/timeAtHome"
-        app:layout_constraintStart_toStartOf="@+id/dog"
-        app:layout_constraintTop_toTopOf="@+id/timeAtHome"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="250dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/timeAtHome"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="50dp"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
-        android:ems="6"
+        android:ems="8"
         android:hint="@string/time"
         android:inputType="number"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/householdSize"
-        tools:layout_conversion_absoluteHeight="48dp" />
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/timeQuestion"
+        app:layout_constraintBottom_toBottomOf="@id/timeQuestion"/>
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/submit"
-        android:layout_width="131sp"
+        android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="590dp"
         android:backgroundTint="#402243"
         android:text="@string/submit"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/back"
-        tools:layout_conversion_absoluteHeight="58dp"
-        tools:layout_conversion_absoluteWidth="131dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/back"
-        android:layout_width="0dp"
-        android:layout_height="58sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="195dp"
-        android:backgroundTint="#402243"
-        android:text="@string/back"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/name"
-        tools:layout_conversion_absoluteHeight="58dp"
-        tools:layout_conversion_absoluteWidth="131dp" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,20 +16,21 @@ import java.util.*;
 public class ThirdActivity extends AppCompatActivity {
 
     EditText pet;
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        MaterialButton back = findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openFirstActivity();
-            }
-        });
 
-        pet = findViewById(R.id.bestChoice);
+
+        pet = findViewById(R.id.firstChoice);
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
 
         ArrayList<String> pets = new ArrayList<String>(Arrays.asList("Dog","Cat","Bird","Hamster","Fish"));
@@ -164,8 +165,5 @@ public class ThirdActivity extends AppCompatActivity {
         pet.setText(pets.get(scores.indexOf(Collections.max(scores))));
     }
 
-    public void openFirstActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
+
 }

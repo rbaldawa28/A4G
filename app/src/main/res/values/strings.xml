@@ -8,8 +8,8 @@
     <string name="cat">Cat</string>
     <string name="hamster">Hamster</string>
     <string name="bird">Bird</string>
-    <string name="budget">Monthly Pet Budget</string>
-    <string name="householdSize">Number of Household Members</string>
+    <string name="budget">Budget</string>
+    <string name="householdSize">People</string>
     <string name="sqft">House Sq. Ft.</string>
     <string name="age">Current Age</string>
     <string name="timeAtHome">How much time do you spend at work/school per week?</string>
