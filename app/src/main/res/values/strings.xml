@@ -17,4 +17,61 @@
     <string name="submit">SUBMIT</string>
     <string name="about">About Our App</string>
     <string name="back">BACK</string>
+    <string name="AboutOurApp">About our App</string>
+    <string name="p1">In the United States, about 6.3 million stray animals
+        enter shelters each year. Additionally, approximately 920,000 of
+        those shelter animals are euthanized annually (ASPCA 2021). Animals
+        are commonly abandoned or relinquished due to issues including
+        allergies and the adopter being unprepared for care and costs
+        (Weiss et al., 2015). Different pets and animals require different
+        levels of care and financial capabilities, which makes choosing
+        the correct pet difficult for many potential adopters. Unfit
+        owners can cause detrimental effects such as neglect or abuse
+        to their pets.</string>
+    <string name="p2">Furthermore, the global COVID-19 pandemic caused
+        an increase in pet purchasing and adoption as individuals
+        desired a companion for the time spent at home. However,
+        as the world continues to return to a more in-person model,
+        pet owners have less time to dedicate to their dependents.
+        Their animals are no longer given the attention or time
+        required, causing a recent uptick in pets relinquished
+        or given away (PetPoint, n.d.). While the number of
+        surrendered pets had been decreasing annually, the
+        number of cats and dogs surrendered increased from
+        2020 to 2021.</string>
+    <string name="p3">Our app aims to address this problem
+        and the ever growing need for good homes for animals.
+        We hope to match each user with the appropriate animal
+        for them and allow them to create a customizable
+        preference profile which inputs the user’s data into an
+        algorithm. This algorithm uses the user’s input along
+        with data about different pet types to make a prediction
+        of the pet type that would best suit the user’s needs
+        and circumstances. The data used in this algorithm was
+        collected from surveys and online resources. By using
+        quantitative data to make pet recommendations, we aim
+        to reduce pet homelessness and give owners
+        a companion they need that can best compliment
+        their owners’ situations. </string>
+    <string name="p4">Furthermore, the global COVID-19 pandemic caused
+        an increase in pet purchasing and adoption as individuals desired
+        a companion for the time spent at home. However, as the world
+        continues to return to a more in-person model, pet owners have
+        less time to dedicate to their dependents. Their animals are no
+        longer given the attention or time required, causing a recent
+        uptick in pets relinquished or given away (PetPoint, n.d.).
+        While the number of surrendered pets had been decreasing annually,
+        the number of cats and dogs surrendered increased from 2020 to 2021.</string>
+    <string name="p5">Our app aims to address this problem and the ever
+        growing need for good homes for animals. We hope to match each
+        user with the appropriate animal for them and allow them to
+        create a customizable preference profile which inputs the
+        user’s data into an algorithm. This algorithm uses the
+        user’s input along with data about different pet types
+        to make a prediction of the pet type that would best suit the
+        user’s needs and circumstances. The data used in this algorithm
+        was collected from surveys and online resources. By using
+        quantitative data to make pet recommendations, we aim to reduce
+        pet homelessness and give owners a companion they need that can
+        best compliment their owners’ situations. </string>
 </resources>

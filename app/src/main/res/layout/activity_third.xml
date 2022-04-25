@@ -8,6 +8,57 @@
     android:background="#D6BBC0"
     tools:context=".ThirdActivity">
 
+    <EditText
+        android:id="@+id/firstChoice5"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="292dp"
+        android:ems="16"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/firstChoice4"
+        app:layout_constraintStart_toStartOf="@id/firstChoice4"
+        app:layout_constraintTop_toBottomOf="@id/pet" />
+
+    <EditText
+        android:id="@+id/firstChoice4"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="244dp"
+        android:ems="16"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/firstChoice3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/firstChoice3"
+        app:layout_constraintTop_toBottomOf="@id/pet" />
+
+    <EditText
+        android:id="@+id/firstChoice3"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="196dp"
+        android:ems="16"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/firstChoice2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/firstChoice2"
+        app:layout_constraintTop_toBottomOf="@id/pet" />
+
+    <EditText
+        android:id="@+id/firstChoice2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="148dp"
+        android:ems="16"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/firstChoice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/firstChoice"
+        app:layout_constraintTop_toBottomOf="@id/pet" />
+
     <TextView
         android:id="@+id/pet"
         android:layout_width="wrap_content"

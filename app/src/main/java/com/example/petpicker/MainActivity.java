@@ -35,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
                     openSecondActivity();
             }
         });
+
+        MaterialButton aboutbtn = (MaterialButton) findViewById(R.id.AbOurApp);
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFourthActivity();
+            }
+        });
     }
 
     public void openSecondActivity(){
@@ -46,4 +54,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
     }
+
+    public void openFourthActivity(){
+        Intent intent = new Intent(this, MainActivity4.class);
+        startActivity(intent);
+    }
+
 }

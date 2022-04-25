@@ -38,11 +38,25 @@
         android:id="@+id/viewPets"
         android:layout_width="200dp"
         android:layout_height="80dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="14dp"
         android:backgroundTint="#402243"
         android:text="View Pets For You"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProfile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/AbOurApp"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="104dp"
+        android:backgroundTint="#402243"
+        android:text="@string/AboutOurApp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
