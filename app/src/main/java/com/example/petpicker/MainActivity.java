@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         MaterialButton aboutbtn = (MaterialButton) findViewById(R.id.AbOurApp);
-        profilebtn.setOnClickListener(new View.OnClickListener() {
+        aboutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFourthActivity();
