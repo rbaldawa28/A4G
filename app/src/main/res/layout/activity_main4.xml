@@ -10,12 +10,12 @@
     <TextView
         android:id="@+id/pets2"
         android:layout_width="374dp"
-        android:layout_height="133dp"
+        android:layout_height="180dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="72dp"
         android:text="@string/p1"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintTop_toTopOf="@id/pet2" />
@@ -23,12 +23,12 @@
     <TextView
         android:id="@+id/pets4"
         android:layout_width="374dp"
-        android:layout_height="133dp"
+        android:layout_height="170dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/p4"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pets2" />
 
@@ -37,13 +37,12 @@
         android:layout_width="374dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="16dp"
         android:text="@string/p5"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/pets4" />
+        app:layout_constraintTop_toBottomOf="@id/pets4" />
 
     <TextView
         android:id="@+id/pet2"
