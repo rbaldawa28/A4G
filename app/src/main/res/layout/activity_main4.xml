@@ -21,42 +21,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/pets3"
-        android:layout_width="374dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
-        android:text="@string/p1"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/pets4"
         android:layout_width="374dp"
         android:layout_height="133dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="140dp"
         android:text="@string/p4"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintTop_toTopOf="@id/pets3" />
+        tools:layout_editor_absoluteY="220dp" />
 
     <TextView
         android:id="@+id/pets5"
         android:layout_width="374dp"
-        android:layout_height="133dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="150dp"
         android:text="@string/p5"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/pets4" />
 
     <TextView
