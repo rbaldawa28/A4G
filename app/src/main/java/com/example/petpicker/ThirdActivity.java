@@ -15,7 +15,7 @@ import java.util.*;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    EditText pet;
+    EditText firstChoice, secondChoice, thirdChoice, fourthChoice, fifthChoice;
 
     @Override
     public void onBackPressed() {
@@ -28,7 +28,12 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        pet = findViewById(R.id.firstChoice);
+        firstChoice = findViewById(R.id.firstChoice);
+        secondChoice = findViewById(R.id.secondChoice);
+        thirdChoice = findViewById(R.id.thirdChoice);
+        fourthChoice = findViewById(R.id.fourthChoice);
+        fifthChoice = findViewById(R.id.fifthChoice);
+
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
 
         ArrayList<String> pets = new ArrayList<String>(Arrays.asList("Dog","Cat","Bird","Hamster","Fish"));
@@ -160,9 +165,8 @@ public class ThirdActivity extends AppCompatActivity {
             scores.set(4, 0.0);
         }
 
+        firstChoice.setText(pets.get(scores.indexOf(Collections.max(scores))));
 
-        pet.setText(pets.get(scores.indexOf(Collections.max(scores))));
+
     }
-
-
 }
