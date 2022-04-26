@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import java.util.*;
 
 public class Pets {
-    private HashMap<String, Double> petScores;
+    private LinkedHashMap<String, Double> petScores;
     private SharedPreferences sp;
     public int budget, time, sqft, age, size;
     public boolean dog, cat, bird, fish, hamster;
@@ -192,8 +192,57 @@ public class Pets {
         {
             petScores.put("dog", petScores.get("fish")*0.1);
         }
+
+        petScores = sortByValue(petScores);
     }
 
+    public String getFirst()
+    {
+        return String.valueOf(petScores.entrySet().toArray()[4]);
+    }
 
+    public String getSecond()
+    {
+        return String.valueOf(petScores.entrySet().toArray()[3]);
+    }
+
+    public String getThird()
+    {
+        return String.valueOf(petScores.entrySet().toArray()[2]);
+    }
+
+    public String getFourth()
+    {
+        return String.valueOf(petScores.entrySet().toArray()[1]);
+    }
+
+    public String getFifth()
+    {
+        return String.valueOf(petScores.entrySet().toArray()[0]);
+    }
+
+    // function to sort hashmap by values
+    public static LinkedHashMap<String, Double> sortByValue(LinkedHashMap<String, Double> hm)
+    {
+        // Create a list from elements of HashMap
+        List<Map.Entry<String, Double> > list =
+                new LinkedList<Map.Entry<String, Double> >(hm.entrySet());
+
+        // Sort the list
+        Collections.sort(list, new Comparator<Map.Entry<String, Double> >() {
+            public int compare(Map.Entry<String, Double> o1,
+                               Map.Entry<String, Double> o2)
+            {
+                return (o1.getValue()).compareTo(o2.getValue());
+            }
+        });
+
+        // put data from sorted list to hashmap
+        LinkedHashMap<String, Double> temp = new LinkedHashMap<String, Double>();
+        for (Map.Entry<String, Double> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        return temp;
+    }
 
 }
