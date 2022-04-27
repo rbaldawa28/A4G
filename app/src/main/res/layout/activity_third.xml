@@ -8,62 +8,12 @@
     android:background="#D6BBC0"
     tools:context=".ThirdActivity">
 
-    <EditText
-        android:id="@+id/firstChoice5"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="292dp"
-        android:ems="16"
-        android:inputType="text"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/firstChoice4"
-        app:layout_constraintStart_toStartOf="@id/firstChoice4"
-        app:layout_constraintTop_toBottomOf="@id/pet" />
-
-    <EditText
-        android:id="@+id/firstChoice4"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="244dp"
-        android:ems="16"
-        android:inputType="text"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/firstChoice3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/firstChoice3"
-        app:layout_constraintTop_toBottomOf="@id/pet" />
-
-    <EditText
-        android:id="@+id/firstChoice3"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="196dp"
-        android:ems="16"
-        android:inputType="text"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/firstChoice2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/firstChoice2"
-        app:layout_constraintTop_toBottomOf="@id/pet" />
-
-    <EditText
-        android:id="@+id/firstChoice2"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="148dp"
-        android:ems="16"
-        android:inputType="text"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/firstChoice"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/firstChoice"
-        app:layout_constraintTop_toBottomOf="@id/pet" />
 
     <TextView
         android:id="@+id/pet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="30dp"
         android:text="Your Top Pets"
         android:textColor="@color/black"
@@ -79,10 +29,132 @@
         android:ems="16"
         android:inputType="text"
         android:textColorHint="@color/black"
+        android:hint="First Choice"
+        android:layout_marginEnd="250dp"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pet"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/firstPet"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#402243"
+        android:text="First Option"
+        android:textColor="@color/white"
+        android:layout_marginStart="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/firstChoice" />
+
+    <EditText
+        android:id="@+id/secondChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="16"
+        android:inputType="text"
+        android:hint="Second Choice"
+        android:textColorHint="@color/black"
+        android:layout_marginEnd="250dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pet"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/secondPet"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#402243"
+        android:text="Second Option"
+        android:textColor="@color/white"
+        android:layout_marginStart="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/secondChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/secondChoice" />
+
+    <EditText
+        android:id="@+id/thirdChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="16"
+        android:inputType="text"
+        android:hint="Third Choice"
+        android:textColorHint="@color/black"
+        android:layout_marginEnd="250dp"
+        android:layout_marginTop="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pet"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/thirdPet"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#402243"
+        android:text="Third Option"
+        android:textColor="@color/white"
+        android:layout_marginStart="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/thirdChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdChoice" />
+
+    <EditText
+        android:id="@+id/fourthChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="16"
+        android:inputType="text"
+        android:hint="Fourth Choice"
+        android:textColorHint="@color/black"
+        android:layout_marginEnd="250dp"
+        android:layout_marginTop="550dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pet"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fourthPet"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#402243"
+        android:text="Fourth Option"
+        android:textColor="@color/white"
+        android:layout_marginStart="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fourthChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/fourthChoice" />
+
+    <EditText
+        android:id="@+id/fifthChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="16"
+        android:inputType="text"
+        android:hint="Fourth Choice"
+        android:textColorHint="@color/black"
+        android:layout_marginEnd="250dp"
+        android:layout_marginTop="700dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pet"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fifthPet"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#402243"
+        android:text="Fifth Option"
+        android:textColor="@color/white"
+        android:layout_marginStart="370dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fifthChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/fifthChoice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
