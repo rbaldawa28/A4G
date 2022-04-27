@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 import java.util.*;
 
 public class Pets {
-    private LinkedHashMap<String, Double> petScores;
-    private SharedPreferences sp;
+    public LinkedHashMap<String, Double> petScores = new LinkedHashMap<String, Double>();
+    public SharedPreferences sp;
     public int budget, time, sqft, age, size;
     public boolean dog, cat, bird, fish, hamster;
 
@@ -196,29 +196,23 @@ public class Pets {
         petScores = sortByValue(petScores);
     }
 
-    public String getFirst()
-    {
-        return String.valueOf(petScores.entrySet().toArray()[4]);
-    }
+    public String getFirst() { return String.valueOf(petScores.keySet().toArray()[4]); }
 
     public String getSecond()
     {
-        return String.valueOf(petScores.entrySet().toArray()[3]);
+        return String.valueOf(petScores.keySet().toArray()[3]);
     }
 
-    public String getThird()
-    {
-        return String.valueOf(petScores.entrySet().toArray()[2]);
-    }
+    public String getThird() { return String.valueOf(petScores.keySet().toArray()[2]); }
 
     public String getFourth()
     {
-        return String.valueOf(petScores.entrySet().toArray()[1]);
+        return String.valueOf(petScores.keySet().toArray()[1]);
     }
 
     public String getFifth()
     {
-        return String.valueOf(petScores.entrySet().toArray()[0]);
+        return String.valueOf(petScores.keySet().toArray()[0]);
     }
 
     // function to sort hashmap by values
