@@ -38,75 +38,11 @@
         tools:layout_conversion_absoluteHeight="48dp" />
 
     <TextView
-        android:id="@+id/pets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="206dp"
-        android:text="@string/pets"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/dog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:textSize="30sp"
-        android:text="@string/dog"
-        app:layout_constraintBaseline_toBaselineOf="@+id/cat"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/cat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:textSize="30sp"
-        android:layout_marginTop="10dp"
-        android:text="@string/cat"
-        app:layout_constraintStart_toEndOf="@+id/dog"
-        app:layout_constraintTop_toBottomOf="@+id/pets" />
-
-    <CheckBox
-        android:id="@+id/bird"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_marginStart="10dp"
-        android:text="@string/bird"
-        app:layout_constraintBaseline_toBaselineOf="@+id/cat"
-        app:layout_constraintStart_toEndOf="@+id/cat" />
-
-    <CheckBox
-        android:id="@+id/hamster"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="@string/hamster"
-        app:layout_constraintStart_toEndOf="@+id/bird"
-        app:layout_constraintTop_toTopOf="@+id/bird" />
-
-    <CheckBox
-        android:id="@+id/fish"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="@string/fish"
-        app:layout_constraintBaseline_toBaselineOf="@+id/hamster"
-        app:layout_constraintStart_toEndOf="@+id/hamster" />
-
-    <TextView
         android:id="@+id/budgetQuestion"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="230dp"
         android:text="What is your monthly budget?"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -131,7 +67,7 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="290dp"
         android:text="What is your liveable sqft?"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -156,7 +92,7 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="350dp"
         android:text="What is your current age?"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -181,7 +117,7 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="410dp"
         android:text="How many people live in your household?"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -206,8 +142,8 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="600dp"
-        android:text="How much time do you spend at work per week?"
+        android:layout_marginTop="500dp"
+        android:text="How much time do you spend at home per day?"
         android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
