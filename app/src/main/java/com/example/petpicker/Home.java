@@ -5,18 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
-public class MainActivity extends AppCompatActivity {
+public class Home extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         MaterialButton petbtn = (MaterialButton) findViewById(R.id.viewPets);
         petbtn.setOnClickListener(new View.OnClickListener() {
@@ -46,17 +44,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSecondActivity(){
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
     }
 
     public void openThirdActivity(){
-        Intent intent = new Intent(this, ThirdActivity.class);
+        Intent intent = new Intent(this, Options.class);
         startActivity(intent);
     }
 
     public void openFourthActivity(){
-        Intent intent = new Intent(this, MainActivity4.class);
+        Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
 

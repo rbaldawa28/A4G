@@ -1,11 +1,9 @@
 package com.example.petpicker;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
-public class SecondActivity extends AppCompatActivity{
+public class Profile extends AppCompatActivity{
 
     EditText name, budget, age, sqft, householdSize, time;
     CheckBox dog, cat, bird, hamster, fish;
@@ -25,13 +23,13 @@ public class SecondActivity extends AppCompatActivity{
     boolean bDog, bCat, bBird, bHamster, bFish;
 
     public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_profile);
 
         name = findViewById(R.id.name);
         budget = findViewById(R.id.budget);
