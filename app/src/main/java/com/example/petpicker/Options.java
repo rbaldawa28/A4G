@@ -36,7 +36,7 @@ public class Options extends AppCompatActivity {
         });
 
         MaterialButton option2 = findViewById(R.id.secondPet);
-        option1.setOnClickListener(new View.OnClickListener() {
+        option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 open2();
@@ -44,7 +44,7 @@ public class Options extends AppCompatActivity {
         });
 
         MaterialButton option3 = findViewById(R.id.thirdPet);
-        option1.setOnClickListener(new View.OnClickListener() {
+        option3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 open3();
@@ -52,7 +52,7 @@ public class Options extends AppCompatActivity {
         });
 
         MaterialButton option4 = findViewById(R.id.fourthPet);
-        option1.setOnClickListener(new View.OnClickListener() {
+        option4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 open4();
@@ -60,7 +60,7 @@ public class Options extends AppCompatActivity {
         });
 
         MaterialButton option5 = findViewById(R.id.fifthPet);
-        option1.setOnClickListener(new View.OnClickListener() {
+        option5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 open5();
