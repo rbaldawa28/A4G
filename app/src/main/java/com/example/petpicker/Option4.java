@@ -1,4 +1,6 @@
 package com.example.petpicker;
 
-public class Option4 {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Option4 extends AppCompatActivity {
 }
