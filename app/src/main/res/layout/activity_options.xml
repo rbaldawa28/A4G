@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6BBC0"
+    android:background="#E8EBFB"
     tools:context=".Options">
 
 
@@ -19,141 +19,141 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/firstChoice"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="250dp"
         android:ems="16"
+        android:hint="First Choice"
         android:inputType="text"
         android:textColorHint="@color/black"
-        android:hint="First Choice"
-        android:layout_marginEnd="250dp"
-        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pet"/>
+        app:layout_constraintTop_toBottomOf="@id/pet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/firstPet"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:backgroundTint="#402243"
+        android:layout_marginStart="370dp"
+        android:backgroundTint="#8090EF"
         android:text="First Option"
         android:textColor="@color/white"
-        android:layout_marginStart="370dp"
+        app:layout_constraintBottom_toBottomOf="@+id/firstChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="@+id/firstChoice"
-        app:layout_constraintBottom_toBottomOf="@+id/firstChoice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/secondChoice"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:ems="16"
-        android:inputType="text"
-        android:hint="Second Choice"
-        android:textColorHint="@color/black"
-        android:layout_marginEnd="250dp"
         android:layout_marginTop="250dp"
+        android:layout_marginEnd="250dp"
+        android:ems="16"
+        android:hint="Second Choice"
+        android:inputType="text"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pet"/>
+        app:layout_constraintTop_toBottomOf="@id/pet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/secondPet"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:backgroundTint="#402243"
+        android:layout_marginStart="370dp"
+        android:backgroundTint="#8090EF"
         android:text="Second Option"
         android:textColor="@color/white"
-        android:layout_marginStart="370dp"
+        app:layout_constraintBottom_toBottomOf="@+id/secondChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="@+id/secondChoice"
-        app:layout_constraintBottom_toBottomOf="@+id/secondChoice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/thirdChoice"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:ems="16"
-        android:inputType="text"
-        android:hint="Third Choice"
-        android:textColorHint="@color/black"
-        android:layout_marginEnd="250dp"
         android:layout_marginTop="400dp"
+        android:layout_marginEnd="250dp"
+        android:ems="16"
+        android:hint="Third Choice"
+        android:inputType="text"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pet"/>
+        app:layout_constraintTop_toBottomOf="@id/pet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/thirdPet"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:backgroundTint="#402243"
+        android:layout_marginStart="370dp"
+        android:backgroundTint="#8090EF"
         android:text="Third Option"
         android:textColor="@color/white"
-        android:layout_marginStart="370dp"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="@+id/thirdChoice"
-        app:layout_constraintBottom_toBottomOf="@+id/thirdChoice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/fourthChoice"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:ems="16"
-        android:inputType="text"
-        android:hint="Fourth Choice"
-        android:textColorHint="@color/black"
-        android:layout_marginEnd="250dp"
         android:layout_marginTop="550dp"
+        android:layout_marginEnd="250dp"
+        android:ems="16"
+        android:hint="Fourth Choice"
+        android:inputType="text"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pet"/>
+        app:layout_constraintTop_toBottomOf="@id/pet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/fourthPet"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:backgroundTint="#402243"
+        android:layout_marginStart="370dp"
+        android:backgroundTint="#8090EF"
         android:text="Fourth Option"
         android:textColor="@color/white"
-        android:layout_marginStart="370dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fourthChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fourthChoice"
-        app:layout_constraintBottom_toBottomOf="@+id/fourthChoice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/fifthChoice"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:ems="16"
-        android:inputType="text"
-        android:hint="Fourth Choice"
-        android:textColorHint="@color/black"
-        android:layout_marginEnd="250dp"
         android:layout_marginTop="700dp"
+        android:layout_marginEnd="250dp"
+        android:ems="16"
+        android:hint="Fourth Choice"
+        android:inputType="text"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pet"/>
+        app:layout_constraintTop_toBottomOf="@id/pet" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/fifthPet"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:backgroundTint="#402243"
+        android:layout_marginStart="370dp"
+        android:backgroundTint="#8090EF"
         android:text="Fifth Option"
         android:textColor="@color/white"
-        android:layout_marginStart="370dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fifthChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fifthChoice"
-        app:layout_constraintBottom_toBottomOf="@+id/fifthChoice" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

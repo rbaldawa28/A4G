@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6BBC0"
+    android:background="#E8EBFB"
     tools:context=".Option2">
 
     <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id  ="@+id/youtube"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
