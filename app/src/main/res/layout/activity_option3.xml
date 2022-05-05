@@ -7,4 +7,11 @@
     android:background="#D6BBC0"
     tools:context=".Option3">
 
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id  ="@+id/youtube"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
