@@ -20,7 +20,7 @@
         android:layout_marginTop="104dp"
         android:backgroundTint="#402243"
         android:text="View Options"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/youtube" />

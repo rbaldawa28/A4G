@@ -116,9 +116,10 @@
 
     <EditText
         android:id="@+id/sqft"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
+        android:drawableTint= "#97A4ED"
         android:ems="8"
         android:hint="@string/sqft"
         android:inputType="number"
@@ -141,7 +142,7 @@
 
     <EditText
         android:id="@+id/budget"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:drawableStart="@drawable/ic_baseline_attach_money_24"
         android:ems="8"
@@ -167,7 +168,7 @@
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:ems="8"
@@ -192,7 +193,7 @@
 
     <EditText
         android:id="@+id/householdSize"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:drawableStart="@drawable/ic_baseline_home_24"
         android:ems="8"
@@ -217,7 +218,7 @@
 
     <EditText
         android:id="@+id/timeAtHome"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:drawableStart="@drawable/ic_baseline_access_alarm_24"
         android:ems="8"
@@ -236,7 +237,7 @@
         android:layout_marginTop="740dp"
         android:backgroundTint="#402243"
         android:text="@string/submit"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

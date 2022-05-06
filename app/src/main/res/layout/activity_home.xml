@@ -25,10 +25,10 @@
         android:id="@+id/editProfile"
         android:layout_width="200dp"
         android:layout_height="80dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="#95a2f1"
         android:text="Edit Profile"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
@@ -40,9 +40,8 @@
         android:layout_marginTop="14dp"
         android:backgroundTint="#95a2f1"
         android:text="View Pets For You"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
@@ -53,18 +52,17 @@
         android:layout_marginTop="104dp"
         android:backgroundTint="#95a2f1"
         android:text="@string/AboutOurApp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="95dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome"
         app:srcCompat="@mipmap/ic_launcher_round" />
