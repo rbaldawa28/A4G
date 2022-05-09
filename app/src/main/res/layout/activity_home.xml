@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
-        android:text="Welcome to PETential"
+        android:text="PETential"
         android:textColor="#242038"
-        android:textSize="35sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editProfile"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,11 +23,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/editProfile"
-        android:layout_width="200dp"
+        android:layout_width="400dp"
         android:layout_height="80dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="300dp"
         android:backgroundTint="#95a2f1"
         android:text="Edit Profile"
+        android:textSize="40sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,11 +36,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/viewPets"
-        android:layout_width="200dp"
+        android:layout_width="400dp"
         android:layout_height="80dp"
         android:layout_marginTop="14dp"
         android:backgroundTint="#95a2f1"
-        android:text="View Pets For You"
+        android:text="View Pets"
+        android:textSize="40sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,11 +49,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/AbOurApp"
-        android:layout_width="200dp"
+        android:layout_width="400dp"
         android:layout_height="80dp"
         android:layout_marginTop="104dp"
         android:backgroundTint="#95a2f1"
         android:text="@string/AboutOurApp"
+        android:textSize="40sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,8 +62,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

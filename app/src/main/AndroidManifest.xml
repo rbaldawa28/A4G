@@ -27,6 +27,11 @@
         <activity android:name=".Option4" />
         <activity android:name=".Option5" />
         <activity android:name=".Options" />
+        <activity android:name=".Map1" />
+        <activity android:name=".Map2" />
+        <activity android:name=".Map3" />
+        <activity android:name=".Map4" />
+        <activity android:name=".Map5" />
         <activity
             android:name=".Home"
             android:exported="true">

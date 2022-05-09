@@ -57,11 +57,11 @@ public class Profile extends AppCompatActivity{
                 editor.putInt("sqftP",Integer.parseInt(sqft.getText().toString()));
                 editor.putInt("householdSizeP",Integer.parseInt(householdSize.getText().toString()));
                 editor.putInt("timeP",Integer.parseInt(time.getText().toString()));
-                editor.putBoolean("dogP", dog.isChecked());
-                editor.putBoolean("catP", cat.isChecked());
-                editor.putBoolean("birdP", bird.isChecked());
-                editor.putBoolean("hamsterP", hamster.isChecked());
-                editor.putBoolean("fishP", fish.isChecked());
+                editor.putBoolean("DogP", dog.isChecked());
+                editor.putBoolean("CatP", cat.isChecked());
+                editor.putBoolean("BirdP", bird.isChecked());
+                editor.putBoolean("HamsterP", hamster.isChecked());
+                editor.putBoolean("FishP", fish.isChecked());
                 editor.commit();
                 Toast toast = Toast.makeText(getApplicationContext(), "Profile Saved", Toast.LENGTH_LONG);
                 toast.show();
@@ -83,11 +83,11 @@ public class Profile extends AppCompatActivity{
         sqft.setText(String.valueOf(sp.getInt("sqftP",0)));
         householdSize.setText(String.valueOf(sp.getInt("householdSizeP",0)));
         time.setText(String.valueOf(sp.getInt("timeP",0)));
-        dog.setChecked(sp.getBoolean("dogP",false));
-        cat.setChecked(sp.getBoolean("catP",false));
-        bird.setChecked(sp.getBoolean("birdP",false));
-        hamster.setChecked(sp.getBoolean("hamsterP",false));
-        fish.setChecked(sp.getBoolean("fishP",false));
+        dog.setChecked(sp.getBoolean("DogP",false));
+        cat.setChecked(sp.getBoolean("CatP",false));
+        bird.setChecked(sp.getBoolean("BirdP",false));
+        hamster.setChecked(sp.getBoolean("HamsterP",false));
+        fish.setChecked(sp.getBoolean("FishP",false));
 
     }
 

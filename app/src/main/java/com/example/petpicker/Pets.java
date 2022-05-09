@@ -8,17 +8,17 @@ public class Pets {
     public LinkedHashMap<String, Double> petScores = new LinkedHashMap<String, Double>();
     public SharedPreferences sp;
     public int budget, time, sqft, age, size;
-    public boolean dog, cat, bird, fish, hamster;
+    public boolean Dog, Cat, Bird, Fish, Hamster;
 
 
     public Pets(SharedPreferences spIn)
     {
         sp = spIn;
-        petScores.put("dog", 0.0);
-        petScores.put("cat", 0.0);
-        petScores.put("bird", 0.0);
-        petScores.put("hamster", 0.0);
-        petScores.put("fish", 0.0);
+        petScores.put("Dog", 0.0);
+        petScores.put("Cat", 0.0);
+        petScores.put("Bird", 0.0);
+        petScores.put("Hamster", 0.0);
+        petScores.put("Fish", 0.0);
 
         budget = sp.getInt("budgetP",0);
         time = sp.getInt("timeP",0);
@@ -26,11 +26,11 @@ public class Pets {
         age = sp.getInt("ageP",0);
         size = sp.getInt("sizeP",0);
 
-        dog = sp.getBoolean("dogP",false);
-        cat = sp.getBoolean("catP",false);
-        bird = sp.getBoolean("birdP",false);
-        fish = sp.getBoolean("fishP",false);
-        hamster = sp.getBoolean("hamsterP",false);
+        Dog = sp.getBoolean("DogP",false);
+        Cat = sp.getBoolean("CatP",false);
+        Bird = sp.getBoolean("BirdP",false);
+        Fish = sp.getBoolean("FishP",false);
+        Hamster = sp.getBoolean("HamsterP",false);
 
         ArrayList<Integer> budgetA = new ArrayList<>();
         budgetA.add(Math.abs(100 -budget));
@@ -41,23 +41,23 @@ public class Pets {
         int smallestDifference = Collections.min(budgetA);
         if (smallestDifference == budgetA.get(0))
         {
-            petScores.put("dog", petScores.get("dog")+9);
+            petScores.put("Dog", petScores.get("Dog")+9);
         }
         if (smallestDifference == budgetA.get(1))
         {
-            petScores.put("cat", petScores.get("cat")+9);
+            petScores.put("Cat", petScores.get("Cat")+9);
         }
         if (smallestDifference == budgetA.get(2))
         {
-            petScores.put("bird", petScores.get("bird")+9);
+            petScores.put("Bird", petScores.get("Bird")+9);
         }
         if (smallestDifference == budgetA.get(3))
         {
-            petScores.put("hamster", petScores.get("hamster")+9);
+            petScores.put("Hamster", petScores.get("Hamster")+9);
         }
         if (smallestDifference == budgetA.get(4))
         {
-            petScores.put("fish", petScores.get("fish")+9);
+            petScores.put("Fish", petScores.get("Fish")+9);
         }
 
         ArrayList<Integer> timeA = new ArrayList<>();
@@ -69,23 +69,23 @@ public class Pets {
         int smallestDifference1 = Collections.min(timeA);
         if (smallestDifference1 == timeA.get(0))
         {
-            petScores.put("dog", petScores.get("dog")+7);
+            petScores.put("Dog", petScores.get("Dog")+7);
         }
         if (smallestDifference1 == timeA.get(1))
         {
-            petScores.put("cat", petScores.get("cat")+7);
+            petScores.put("Cat", petScores.get("Cat")+7);
         }
         if (smallestDifference1 == timeA.get(2))
         {
-            petScores.put("bird", petScores.get("bird")+7);
+            petScores.put("Bird", petScores.get("Bird")+7);
         }
         if (smallestDifference1 == timeA.get(3))
         {
-            petScores.put("hamster", petScores.get("hamster")+7);
+            petScores.put("Hamster", petScores.get("Hamster")+7);
         }
         if (smallestDifference1 == timeA.get(4))
         {
-            petScores.put("fish", petScores.get("fish")+7);
+            petScores.put("Fish", petScores.get("Fish")+7);
         }
 
         ArrayList<Integer> sqftA = new ArrayList<>();
@@ -97,23 +97,23 @@ public class Pets {
         int smallestDifference3 = Collections.min(sqftA);
         if (smallestDifference3 == sqftA.get(0))
         {
-            petScores.put("dog", petScores.get("dog")+4);
+            petScores.put("Dog", petScores.get("Dog")+4);
         }
         if (smallestDifference3 == sqftA.get(1))
         {
-            petScores.put("cat", petScores.get("cat")+4);
+            petScores.put("Cat", petScores.get("Cat")+4);
         }
         if (smallestDifference3 == sqftA.get(2))
         {
-            petScores.put("bird", petScores.get("bird")+4);
+            petScores.put("Bird", petScores.get("Bird")+4);
         }
         if (smallestDifference3 == sqftA.get(3))
         {
-            petScores.put("hamster", petScores.get("hamster")+4);
+            petScores.put("Hamster", petScores.get("Hamster")+4);
         }
         if (smallestDifference3 == sqftA.get(4))
         {
-            petScores.put("fish", petScores.get("fish")+4);
+            petScores.put("Fish", petScores.get("Fish")+4);
         }
 
         ArrayList<Integer> ageA = new ArrayList<>();
@@ -125,23 +125,23 @@ public class Pets {
         int smallestDifference4 = Collections.min(ageA);
         if (smallestDifference4 == ageA.get(0))
         {
-            petScores.put("dog", petScores.get("dog")+4);
+            petScores.put("Dog", petScores.get("Dog")+4);
         }
         if (smallestDifference4 == ageA.get(1))
         {
-            petScores.put("cat", petScores.get("cat")+4);
+            petScores.put("Cat", petScores.get("Cat")+4);
         }
         if (smallestDifference4 == ageA.get(2))
         {
-            petScores.put("bird", petScores.get("bird")+4);
+            petScores.put("Bird", petScores.get("Bird")+4);
         }
         if (smallestDifference4 == ageA.get(3))
         {
-            petScores.put("hamster", petScores.get("hamster")+4);
+            petScores.put("Hamster", petScores.get("Hamster")+4);
         }
         if (smallestDifference4 == ageA.get(4))
         {
-            petScores.put("fish", petScores.get("fish")+4);
+            petScores.put("Fish", petScores.get("Fish")+4);
         }
 
         ArrayList<Integer> sizeA = new ArrayList<>();
@@ -153,44 +153,44 @@ public class Pets {
         int smallestDifference5 = Collections.min(sizeA);
         if (smallestDifference5 == sizeA.get(0))
         {
-            petScores.put("dog", petScores.get("dog")+3);
+            petScores.put("Dog", petScores.get("Dog")+3);
         }
         if (smallestDifference5 == sizeA.get(1))
         {
-            petScores.put("cat", petScores.get("cat")+3);
+            petScores.put("Cat", petScores.get("Cat")+3);
         }
         if (smallestDifference5 == sizeA.get(2))
         {
-            petScores.put("bird", petScores.get("bird")+3);
+            petScores.put("Bird", petScores.get("Bird")+3);
         }
         if (smallestDifference5 == sizeA.get(3))
         {
-            petScores.put("hamster", petScores.get("hamster")+3);
+            petScores.put("Hamster", petScores.get("Hamster")+3);
         }
         if (smallestDifference5 == sizeA.get(4))
         {
-            petScores.put("fish", petScores.get("fish")+3);
+            petScores.put("Fish", petScores.get("Fish")+3);
         }
 
-        if(!dog)
+        if(!Dog)
         {
-            petScores.put("dog", petScores.get("dog")*0.1);
+            petScores.put("Dog", petScores.get("Dog")*0.1);
         }
-        if(!cat)
+        if(!Cat)
         {
-            petScores.put("dog", petScores.get("cat")*0.1);
+            petScores.put("Cat", petScores.get("Cat")*0.1);
         }
-        if(!bird)
+        if(!Bird)
         {
-            petScores.put("dog", petScores.get("bird")*0.1);
+            petScores.put("Bird", petScores.get("Bird")*0.1);
         }
-        if(!hamster)
+        if(!Hamster)
         {
-            petScores.put("dog", petScores.get("hamster")*0.1);
+            petScores.put("Hamster", petScores.get("Hamster")*0.1);
         }
-        if(!fish)
+        if(!Fish)
         {
-            petScores.put("dog", petScores.get("fish")*0.1);
+            petScores.put("Fish", petScores.get("Fish")*0.1);
         }
 
         petScores = sortByValue(petScores);

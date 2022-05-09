@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,13 +14,27 @@ import com.google.android.material.button.MaterialButton;
 
 public class Options extends AppCompatActivity {
 
-    EditText firstChoice, secondChoice, thirdChoice, fourthChoice, fifthChoice;
+    TextView firstChoice, secondChoice, thirdChoice, fourthChoice, fifthChoice;
 
 
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
+    }
+
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
+
+        Pets options = new Pets(sp);
+
+        firstChoice.setText("1. " + options.getFirst());
+        secondChoice.setText("2. " + options.getSecond());
+        thirdChoice.setText("3. " + options.getThird());
+        fourthChoice.setText("4. " + options.getFourth());
+        fifthChoice.setText("5. " + options.getFifth());
     }
 
     @Override
@@ -77,11 +92,11 @@ public class Options extends AppCompatActivity {
 
         Pets options = new Pets(sp);
 
-        firstChoice.setText(options.getFirst());
-        secondChoice.setText(options.getSecond());
-        thirdChoice.setText(options.getThird());
-        fourthChoice.setText(options.getFourth());
-        fifthChoice.setText(options.getFifth());
+        firstChoice.setText("1. " + options.getFirst());
+        secondChoice.setText("2. " + options.getSecond());
+        thirdChoice.setText("3. " + options.getThird());
+        fourthChoice.setText("4. " + options.getFourth());
+        fifthChoice.setText("5. " + options.getFifth());
     }
     public void open1()
     {
