@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="320dp"
-        android:text="What is your liveable sqft?"
+        android:text="What is your livable sqft?"
         android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
