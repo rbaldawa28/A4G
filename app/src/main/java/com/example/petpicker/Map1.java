@@ -182,7 +182,7 @@ public class Map1 extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(List<HashMap<String, String>> hashMaps) {
-            //map.clear();
+            map.clear();
             for(int i = 0; i <hashMaps.size(); i++)
             {
                 HashMap<String,String> hashMapList = hashMaps.get(i);

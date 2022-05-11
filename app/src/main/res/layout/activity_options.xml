@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/firstChoice"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="100dp"
         android:layout_marginStart="-200dp"
         android:text="1. "
@@ -51,7 +51,7 @@
 
     <TextView
         android:id="@+id/secondChoice"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="230dp"
         android:layout_width="300dp"
         android:layout_marginStart="-200dp"
@@ -79,7 +79,7 @@
 
     <TextView
         android:id="@+id/thirdChoice"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="360dp"
         android:layout_width="300dp"
         android:layout_marginStart="-200dp"
@@ -107,7 +107,7 @@
 
     <TextView
         android:id="@+id/fourthChoice"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="490dp"
         android:text="4. "
         android:textColor="@color/black"
@@ -135,7 +135,7 @@
 
     <TextView
         android:id="@+id/fifthChoice"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="620dp"
         android:text="5. "
         android:textColor="@color/black"
