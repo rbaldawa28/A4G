@@ -14,7 +14,7 @@
         android:layout_marginTop="70dp"
         android:text="Further Information"
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,13 +23,12 @@
         android:id="@+id/youtube"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
 
     <com.google.android.material.button.MaterialButton
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Button.Triangle"
         android:id="@+id/vOptions"
         android:layout_width="400dp"
         android:layout_height="80dp"
