@@ -10,14 +10,38 @@
     <TextView
         android:id="@+id/pets2"
         android:layout_width="550dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="24dp"
         android:text="@string/p1"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pet2" />
+
+    <TextView
+        android:id="@+id/para2"
+        android:layout_width="550dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/p2"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pets2" />
+
+    <TextView
+        android:id="@+id/para3"
+        android:layout_width="550dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/p3"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/para2" />
 
     <TextView
         android:id="@+id/pet2"
@@ -31,4 +55,14 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="152dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/para3"
+        app:srcCompat="@mipmap/ic_launcher_round" />
 </androidx.constraintlayout.widget.ConstraintLayout>

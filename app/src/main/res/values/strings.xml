@@ -18,12 +18,22 @@
     <string name="about">About Our App</string>
     <string name="back">BACK</string>
     <string name="AboutOurApp">About our App</string>
-    <string name="p1">In the United States, about 6.3 million
-        stray animals enter shelters each year. Our app
-        aims to address this problem of the ever growing
-        need for finding good homes for animals. We hope
-        to match you with an animal companion that can
-        best compliment your living situation.</string>
+    <string name="p1">
+        Petential aims to address the ever growing problem of
+        finding good homes for animals by matching users with a
+        pet that will best compliment their living situation using a
+        complex matching algorithm.
+        </string>
+    <string name="p2">
+        Petential will analyze the information you provide to the profile
+        with its matching algorithm. The user\'s ideal pet will be
+        ranked. Each option will include an instructional video and a map
+        to stores that sell that type of pet.
+    </string>
+    <string name="p3">
+        We hope that by using this app we can match you to the animal
+        companion that best compliments your living situation.
+    </string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="google_map_key">AIzaSyA8dSk3tEsPRF7gOJZPz4WZGCJ9v0Ub998</string>
 </resources>
