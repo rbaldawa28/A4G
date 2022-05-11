@@ -62,7 +62,7 @@ public class Profile extends AppCompatActivity{
                 editor.putBoolean("BirdP", bird.isChecked());
                 editor.putBoolean("HamsterP", hamster.isChecked());
                 editor.putBoolean("FishP", fish.isChecked());
-                editor.commit();
+                editor.apply();
                 Toast toast = Toast.makeText(getApplicationContext(), "Profile Saved", Toast.LENGTH_LONG);
                 toast.show();
             }
