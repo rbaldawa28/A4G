@@ -24,4 +24,6 @@
         need for finding good homes for animals. We hope
         to match you with an animal companion that can
         best compliment your living situation.</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="google_map_key">AIzaSyA8dSk3tEsPRF7gOJZPz4WZGCJ9v0Ub998</string>
 </resources>

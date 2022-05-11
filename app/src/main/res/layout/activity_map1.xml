@@ -7,4 +7,43 @@
     android:background="#E8EBFB"
     tools:context=".Map1">
 
+
+    <Spinner
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:layout_marginStart="-200dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/place"
+        android:background="@android:drawable/editbox_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="370dp"
+        android:backgroundTint="#8090EF"
+        android:text="Search"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/place"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="860dp"
+        android:id="@+id/smf"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

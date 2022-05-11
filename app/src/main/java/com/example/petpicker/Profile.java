@@ -67,8 +67,6 @@ public class Profile extends AppCompatActivity{
                 toast.show();
             }
         });
-
-
     }
 
     @Override
@@ -76,7 +74,6 @@ public class Profile extends AppCompatActivity{
         super.onResume();
 
         SharedPreferences sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-
         name.setText(sp.getString("nameP",""));
         age.setText(String.valueOf(sp.getInt("ageP",0)));
         budget.setText(String.valueOf(sp.getInt("budgetP",0)));
