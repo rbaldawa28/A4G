@@ -14,6 +14,7 @@ public class Pets {
     public Pets(SharedPreferences spIn)
     {
         sp = spIn;
+        //Shared Preferences with values added
         petScores.put("Dog", 0.0);
         petScores.put("Cat", 0.0);
         petScores.put("Bird", 0.0);
@@ -32,6 +33,7 @@ public class Pets {
         Fish = sp.getBoolean("FishP",false);
         Hamster = sp.getBoolean("HamsterP",false);
 
+        //ArrayList of values based on research data and certain weight amounts added
         ArrayList<Integer> budgetA = new ArrayList<>();
         budgetA.add(Math.abs(100 -budget));
         budgetA.add(Math.abs(75 - budget));

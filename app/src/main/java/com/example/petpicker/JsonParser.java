@@ -18,6 +18,7 @@ public class JsonParser {
             String latitude = object.getJSONObject("geometry").getJSONObject("location").getString("lat");
             String longitude = object.getJSONObject("geometry").getJSONObject("location").getString("lng");
 
+            //Add values to hash map
             dataList.put("name",name);
             dataList.put("lat", latitude);
             dataList.put("lng", longitude);
@@ -33,6 +34,7 @@ public class JsonParser {
         for(int i =0; i < jsonArray.length(); i++)
         {
             try {
+                //Add JSONArray to dataList
                 HashMap<String, String> data = parseJsonObject((JSONObject) jsonArray.get(i));
                 dataList.add(data);
             } catch (JSONException e) {

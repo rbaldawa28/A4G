@@ -29,6 +29,7 @@ public class Options extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
 
         Pets options = new Pets(sp);
+        //Create options from SharedPreferences and set text based on ordering
 
         firstChoice.setText("1. " + options.getFirst());
         secondChoice.setText("2. " + options.getSecond());
@@ -42,6 +43,7 @@ public class Options extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
+        //Creates buttons for options for the next page
         MaterialButton option1 = findViewById(R.id.firstPet);
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,12 +94,15 @@ public class Options extends AppCompatActivity {
 
         Pets options = new Pets(sp);
 
+        //Create options from SharedPreferences and set text based on ordering
         firstChoice.setText("1. " + options.getFirst());
         secondChoice.setText("2. " + options.getSecond());
         thirdChoice.setText("3. " + options.getThird());
         fourthChoice.setText("4. " + options.getFourth());
         fifthChoice.setText("5. " + options.getFifth());
     }
+
+    //Methods for opening activities
     public void open1()
     {
         Intent intent = new Intent(this, Option1.class);
