@@ -21,6 +21,7 @@ public class Pets {
     public Pets(SharedPreferences spIn)
     {
         sp = spIn;
+        //Shared Preferences with values added
         petScores.put("Dog", 0.0);
         petScores.put("Cat", 0.0);
         petScores.put("Bird", 0.0);
@@ -39,10 +40,12 @@ public class Pets {
         Fish = sp.getBoolean("FishP",false);
         Hamster = sp.getBoolean("HamsterP",false);
 
+
         /**
          * Determines the pet type with the smallest difference between cost and user's budget
          * Adds weighted (9) points to the pet type with the smallest difference
          */
+
         ArrayList<Integer> budgetA = new ArrayList<>();
         budgetA.add(Math.abs(100 -budget));
         budgetA.add(Math.abs(75 - budget));
@@ -277,8 +280,8 @@ public class Pets {
      */
     public static LinkedHashMap<String, Double> sortByValue(LinkedHashMap<String, Double> hm)
     {
-        List<Map.Entry<String, Double> > list =
-                new LinkedList<Map.Entry<String, Double> >(hm.entrySet());
+
+        List<Map.Entry<String, Double> > list = new LinkedList<Map.Entry<String, Double> >(hm.entrySet());
 
         Collections.sort(list, new Comparator<Map.Entry<String, Double> >() {
             public int compare(Map.Entry<String, Double> o1,

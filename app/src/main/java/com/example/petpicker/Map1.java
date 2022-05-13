@@ -51,18 +51,20 @@ public class Map1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map1);
 
+        //getting objects from xml
         spType = findViewById(R.id.place);
         btFind = findViewById(R.id.search);
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.smf);
 
+        //spinner options
         String[] placeTypeList = {"pet_shelters", "petsmart", "petco"};
         String[] placeNameList = {"Pet Shelters", "PetSmart", "PetCo"};
 
         spType.setAdapter(new ArrayAdapter<>(Map1.this, android.R.layout.simple_spinner_dropdown_item, placeNameList));
-
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
+        //checks permissions, requests if there is no permission
         if (ActivityCompat.checkSelfPermission(Map1.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             getCurrentLocation();
         }
@@ -75,10 +77,12 @@ public class Map1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int i = spType.getSelectedItemPosition();
+                //Build url to search on Google Maps
                 String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json" +
                         "?location=" + currentLat + "," + currentLong + "&radius=5000"+ "&types=" + placeTypeList[i]
                         +"&sensor=true" + "&key=" + getResources().getString(R.string.google_map_key);
 
+                //Send URL to search
                 new PlaceTask().execute(url);
             }
         });
@@ -96,18 +100,21 @@ public class Map1 extends AppCompatActivity {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+        //Creates task to get last location
         Task<Location> task = fusedLocationProviderClient.getLastLocation();
         task.addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location) {
                 if(location != null)
                 {
+                    //get current coordinates
                     currentLat = location.getLatitude();
                     currentLong = location.getLongitude();
                     supportMapFragment.getMapAsync(new OnMapReadyCallback() {
                         @Override
                         public void onMapReady(@NonNull GoogleMap googleMap) {
                             map = googleMap;
+                            //zoom into area where current location is
                             map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLat,currentLong), 10));
                         }
                     });
@@ -116,6 +123,7 @@ public class Map1 extends AppCompatActivity {
         });
     }
 
+    //Requests permissions
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -146,6 +154,7 @@ public class Map1 extends AppCompatActivity {
         }
     }
 
+    //Builds url and creates connection to internet
     private String downloadUrl(String string) throws IOException {
         URL url = new URL(string);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -170,6 +179,7 @@ public class Map1 extends AppCompatActivity {
 
             List<HashMap<String,String>> mapList = null;
             JSONObject object = null;
+            //Parse JSON object of data on searchs
             try {
                 object = new JSONObject(strings[0]);
                 mapList = jsonParser.parseResult(object);
@@ -182,14 +192,17 @@ public class Map1 extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(List<HashMap<String, String>> hashMaps) {
+            //clear previous searches
             map.clear();
             for(int i = 0; i <hashMaps.size(); i++)
             {
                 HashMap<String,String> hashMapList = hashMaps.get(i);
+                //gets lat and long of searched places
                 double lat = Double.parseDouble(hashMapList.get("lat"));
                 double lng = Double.parseDouble(hashMapList.get("lng"));
                 String name = hashMapList.get("name");
 
+                //Set options and add markers.
                 LatLng latLng = new LatLng(lat, lng);
                 MarkerOptions options = new MarkerOptions();
                 options.position(latLng);
