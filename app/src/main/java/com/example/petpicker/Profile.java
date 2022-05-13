@@ -1,3 +1,7 @@
+/**
+ * The customizable edit user profile page of the PETential app
+ */
+
 package com.example.petpicker;
 
 import android.content.Intent;
@@ -22,11 +26,18 @@ public class Profile extends AppCompatActivity{
     int budgetVal, ageVal, sqftVal, householdSizeVal, timeVal;
     boolean bDog, bCat, bBird, bHamster, bFish;
 
+    /**
+     * Returns to the MainActivity (homepage) when the back button on the device is pressed
+     */
     public void onBackPressed() {
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 
+    /**
+     * Displays editable profile page
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
@@ -45,7 +56,9 @@ public class Profile extends AppCompatActivity{
         fish = findViewById(R.id.fish);
 
 
-
+/**
+ * Saves user's input when submit button is pressed and displays a message that confirms the profile was saved
+ */
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +82,9 @@ public class Profile extends AppCompatActivity{
         });
     }
 
+    /**
+     * Displays previously saved user information when the profile page is reopened
+     */
     @Override
     protected void onResume() {
         super.onResume();
