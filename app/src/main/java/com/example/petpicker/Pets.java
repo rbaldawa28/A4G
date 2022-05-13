@@ -221,8 +221,7 @@ public class Pets {
     public static LinkedHashMap<String, Double> sortByValue(LinkedHashMap<String, Double> hm)
     {
         // Create a list from elements of HashMap
-        List<Map.Entry<String, Double> > list =
-                new LinkedList<Map.Entry<String, Double> >(hm.entrySet());
+        List<Map.Entry<String, Double> > list = new LinkedList<Map.Entry<String, Double> >(hm.entrySet());
 
         // Sort the list
         Collections.sort(list, new Comparator<Map.Entry<String, Double> >() {
