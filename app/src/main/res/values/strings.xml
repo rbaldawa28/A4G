@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PetPicker</string>
+    <string name="app_name">PETential</string>
     <string name="name">Enter your name</string>
     <string name="title">Customize Profile</string>
     <string name="pets">What pets are you interested in?</string>

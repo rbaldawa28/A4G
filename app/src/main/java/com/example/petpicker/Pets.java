@@ -10,7 +10,6 @@ public class Pets {
     public int budget, time, sqft, age, size;
     public boolean Dog, Cat, Bird, Fish, Hamster;
 
-
     public Pets(SharedPreferences spIn)
     {
         sp = spIn;
