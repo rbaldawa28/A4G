@@ -1,5 +1,6 @@
 /**
- * The customizable edit user profile page of the PETential app
+ * The customizable edit user profile page of the PETential app.
+ * @author rbaldawa28, amchong, ibateman
  */
 
 package com.example.petpicker;
@@ -18,12 +19,26 @@ import com.google.android.material.button.MaterialButton;
 
 public class Profile extends AppCompatActivity{
 
+    /**
+     * Editable areas that allows user to input their information (text)
+     */
     EditText name, budget, age, sqft, householdSize, time;
+
+    /**
+     * Selectable checkboxes for the different pet options and the user's interest
+     */
     CheckBox dog, cat, bird, hamster, fish;
+
+    MaterialButton submit;
+
+
+    /**
+     * Submit/save user information button
+     */
     MaterialButton submit;
 
     /**
-     * Returns to the MainActivity (homepage) when the back button on the device is pressed
+     * Returns to the Home (homepage) when the back button on the device is pressed
      */
     public void onBackPressed() {
         Intent intent = new Intent(this, Home.class);
@@ -79,7 +94,7 @@ public class Profile extends AppCompatActivity{
     }
 
     /**
-     * Displays previously saved user information when the profile page is reopened
+     * Displays previously saved user information when the profile page is opened/reopened
      */
     @Override
     protected void onResume() {

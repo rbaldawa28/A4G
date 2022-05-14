@@ -1,3 +1,10 @@
+/**
+ * The page that displays the recommended pet options and can lead to more information (videos & locations for resources/adoption) about each pet.
+ * The pets are displayed in the order of most recommended (top) to least recommended (bottom).
+ * Recommendation made using algorithm (Pets class).
+ * @author rbaldawa28, amchong, ibateman
+ */
+
 package com.example.petpicker;
 
 import android.content.Intent;
@@ -14,22 +21,30 @@ import com.google.android.material.button.MaterialButton;
 
 public class Options extends AppCompatActivity {
 
+    /**
+     * Different levels of recommendation for different pets.
+     */
     TextView firstChoice, secondChoice, thirdChoice, fourthChoice, fifthChoice;
 
 
+    /**
+     * Returns to the Home (homepage) when the back button on the device is pressed
+     */
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 
+    /**
+     * Creates options from SharedPreferences (user's saved information) and sets text based on ordering when the recommended pets page is opened/reopened
+     */
     protected void onResume() {
         super.onResume();
 
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
 
         Pets options = new Pets(sp);
-        //Create options from SharedPreferences and set text based on ordering
 
         firstChoice.setText("1. " + options.getFirst());
         secondChoice.setText("2. " + options.getSecond());
@@ -38,12 +53,20 @@ public class Options extends AppCompatActivity {
         fifthChoice.setText("5. " + options.getFifth());
     }
 
+    /**
+     * Displays the recommended pets options
+     * Pets displayed in the order of ranking (highest recommendation to lowest recommendation)
+     * All pets have options (buttons) for more information about each pet
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
-        //Creates buttons for options for the next page
+        /**
+         * Button for opening more information activity about the 1st recommended pet option
+         */
         MaterialButton option1 = findViewById(R.id.firstPet);
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +75,9 @@ public class Options extends AppCompatActivity {
             }
         });
 
+        /**
+         * Button for opening more information activity about the 2nd recommended pet option
+         */
         MaterialButton option2 = findViewById(R.id.secondPet);
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +86,9 @@ public class Options extends AppCompatActivity {
             }
         });
 
+        /**
+         * Button for opening more information activity about the 3rd recommended pet option
+         */
         MaterialButton option3 = findViewById(R.id.thirdPet);
         option3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +97,9 @@ public class Options extends AppCompatActivity {
             }
         });
 
+        /**
+         * Button for opening more information activity about the 4th recommended pet option
+         */
         MaterialButton option4 = findViewById(R.id.fourthPet);
         option4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +108,9 @@ public class Options extends AppCompatActivity {
             }
         });
 
+        /**
+         * Button for opening more information activity about the 5th recommended pet option
+         */
         MaterialButton option5 = findViewById(R.id.fifthPet);
         option5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +129,9 @@ public class Options extends AppCompatActivity {
 
         Pets options = new Pets(sp);
 
-        //Create options from SharedPreferences and set text based on ordering
+        /**
+         * Create options from SharedPreferences and set text based on ordering
+         */
         firstChoice.setText("1. " + options.getFirst());
         secondChoice.setText("2. " + options.getSecond());
         thirdChoice.setText("3. " + options.getThird());
@@ -102,31 +139,45 @@ public class Options extends AppCompatActivity {
         fifthChoice.setText("5. " + options.getFifth());
     }
 
-    //Methods for opening activities
+    /**
+     * Opens activity for information about the 1st recommended pet
+     */
     public void open1()
     {
         Intent intent = new Intent(this, Option1.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens activity for information about the 2nd recommended pet
+     */
     public void open2()
     {
         Intent intent = new Intent(this, Option2.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens activity for information about the 3rd recommended pet
+     */
     public void open3()
     {
         Intent intent = new Intent(this, Option3.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens activity for information about the 4th recommended pet
+     */
     public void open4()
     {
         Intent intent = new Intent(this, Option4.class);
         startActivity(intent);
     }
 
+    /**
+     * Opens activity for information about the 5th recommended pet
+     */
     public void open5()
     {
         Intent intent = new Intent(this, Option5.class);

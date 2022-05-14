@@ -1,5 +1,6 @@
 /**
  * About our App page of the PETential app
+ * @author rbaldawa28, amchong, ibateman
  */
 
 package com.example.petpicker;
@@ -12,7 +13,7 @@ import android.os.Bundle;
 public class About extends AppCompatActivity {
 
     /**
-     * Returns to the MainActivity (homepage) when the back button on the device is pressed
+     * Returns to the Home (homepage) when the back button on the device is pressed
      */
     public void onBackPressed() {
         Intent intent = new Intent(this, Home.class);
