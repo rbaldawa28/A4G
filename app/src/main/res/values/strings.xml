@@ -36,4 +36,5 @@
     </string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="google_map_key">AIzaSyA8dSk3tEsPRF7gOJZPz4WZGCJ9v0Ub998</string>
+    <string name="google_places_key">AIzaSyBzWZkb0qYJb76EeG1fkMEP6V4QQkGvgvw</string>
 </resources>

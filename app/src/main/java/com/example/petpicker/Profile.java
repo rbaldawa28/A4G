@@ -20,11 +20,7 @@ public class Profile extends AppCompatActivity{
 
     EditText name, budget, age, sqft, householdSize, time;
     CheckBox dog, cat, bird, hamster, fish;
-    MaterialButton submit, back;
-    SharedPreferences sp;
-    String nameStr;
-    int budgetVal, ageVal, sqftVal, householdSizeVal, timeVal;
-    boolean bDog, bCat, bBird, bHamster, bFish;
+    MaterialButton submit;
 
     /**
      * Returns to the MainActivity (homepage) when the back button on the device is pressed
