@@ -1,3 +1,8 @@
+/**
+ * Page for additional information (video & leads to locations for resources/adoption) for the 5th recommended pet.
+ * @author rbaldawa28, amchong, ibateman
+ */
+
 package com.example.petpicker;
 
 import android.content.Intent;
@@ -16,15 +21,34 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class Option5 extends YouTubeBaseActivity {
 
+    /**
+     * YouTube Data API v3 key
+     */
     String apiKey = "AIzaSyCqOuV_zZb_nJ5J3205eJ4frQSS2_ZGs7w";
+
+    /**
+     * dog, cat, hamster, bird, and fish video IDs
+     */
     String dogId = "rpzD_Hrrmj0";
     String catId = "MpJXKs_hglY";
-    String hamsterId = "4HN5uWzLoFc";
+    String hamsterId = "08NT5qfmZec";
     String birdId = "eRk0ax91YhA";
     String fishId = "mGmIvhtIM9k";
+
+    /**
+     * ID of YouTube video for the 5th recommended pet
+     */
     String currentId;
+
+    /**
+     * YouTube video display within app page
+     */
     YouTubePlayerView youTubePlayerView;
 
+    /**
+     * Information (video and leads to map) about 5th recommended pet when activity is opened
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option5);
@@ -40,6 +64,9 @@ public class Option5 extends YouTubeBaseActivity {
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
         Pets options = new Pets(sp);
 
+        /**
+         * Assigns the currentID to the 5th recommended pet
+         */
         if(options.getFifth().equals("Dog"))
         {
             currentId = dogId;
@@ -61,6 +88,9 @@ public class Option5 extends YouTubeBaseActivity {
             currentId = fishId;
         }
 
+        /**
+         * Displays and plays the YouTube video
+         */
         youTubePlayerView = findViewById(R.id.youtube);
 
         YouTubePlayer.OnInitializedListener listener = new YouTubePlayer.OnInitializedListener() {
@@ -78,6 +108,9 @@ public class Option5 extends YouTubeBaseActivity {
         youTubePlayerView.initialize(apiKey,listener);
     }
 
+    /**
+     * Opens the map activity that corresponds with the 5th recommended pet
+     */
     public void openMap()
     {
         Intent intent = new Intent(this, Map1.class);

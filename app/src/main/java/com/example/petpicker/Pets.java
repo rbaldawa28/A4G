@@ -1,5 +1,6 @@
 /**
  * The algorithm for ranking and recommending pets.
+ * @author rbaldawa28, amchong, ibateman
  */
 
 package com.example.petpicker;
@@ -9,9 +10,24 @@ import android.content.SharedPreferences;
 import java.util.*;
 
 public class Pets {
+    /**
+     * HashMap of points for each pet
+     */
     public LinkedHashMap<String, Double> petScores = new LinkedHashMap<String, Double>();
+
+    /**
+     * SharedPreferences for user's saved information
+     */
     public SharedPreferences sp;
+
+    /**
+     * User's information
+     */
     public int budget, time, sqft, age, size;
+
+    /**
+     * Viable pet options
+     */
     public boolean Dog, Cat, Bird, Fish, Hamster;
 
     /**

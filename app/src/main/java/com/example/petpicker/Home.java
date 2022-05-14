@@ -1,5 +1,6 @@
 /**
  * Homepage of the PETential app
+ * @author rbaldawa28, amchong, ibateman
  */
 
 package com.example.petpicker;
