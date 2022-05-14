@@ -29,6 +29,9 @@ public class Profile extends AppCompatActivity{
      */
     CheckBox dog, cat, bird, hamster, fish;
 
+    MaterialButton submit;
+
+
     /**
      * Submit/save user information button
      */

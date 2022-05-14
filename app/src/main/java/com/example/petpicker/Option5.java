@@ -113,7 +113,7 @@ public class Option5 extends YouTubeBaseActivity {
      */
     public void openMap()
     {
-        Intent intent = new Intent(this, Map1.class);
+        Intent intent = new Intent(this, Map5.class);
         startActivity(intent);
     }
 }
