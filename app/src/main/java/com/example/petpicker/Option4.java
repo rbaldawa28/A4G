@@ -51,7 +51,7 @@ public class Option4 extends YouTubeBaseActivity {
      */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_option4);
+        setContentView(R.layout.activity_option);
 
         MaterialButton map = (MaterialButton) findViewById(R.id.vOptions);
         map.setOnClickListener(new View.OnClickListener() {

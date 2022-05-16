@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -79,18 +81,20 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
                 JSONObject locationObj = jsonObject.getJSONObject("geometry").getJSONObject("location");
                 String latitude = locationObj.getString("lat");
                 String longitude = locationObj.getString("lng");
-                Log.i("LOC", latitude);
-                Log.i("LOC",longitude);
 
                 JSONObject nameObject = resultsArray.getJSONObject((i));
                 String name_pet = nameObject.getString("name");
                 Log.i("LOC",name_pet);
 
                 LatLng latlng = new LatLng(Double.parseDouble(latitude),Double.parseDouble(longitude));
+                CameraUpdate update = CameraUpdateFactory.newLatLngZoom(latlng,9);
+                mMap.moveCamera(update);
+
                 MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.title(name_pet);
+                markerOptions.title(name_pet + ": " + nameObject.getString("vicinity"));
                 markerOptions.position(latlng);
                 mMap.addMarker(markerOptions);
+
             }
         } catch (JSONException e) {
             e.printStackTrace();

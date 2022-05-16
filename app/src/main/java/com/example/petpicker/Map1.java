@@ -1,10 +1,7 @@
 package com.example.petpicker;
 
 import android.Manifest;
-import android.app.Fragment;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.*;
@@ -15,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -51,7 +47,7 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map2);
+        setContentView(R.layout.activity_map);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.smf);
         mapFragment.getMapAsync(this);
@@ -90,7 +86,7 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
                             stringBuilder.append(lat+"%2C"+lng);
                             stringBuilder.append("&radius="+50000);
                             stringBuilder.append("&type=store");
-                            stringBuilder.append("&keyword="+options.getFirst());
+                            stringBuilder.append("&keyword=pet"+options.getFirst());
                             stringBuilder.append("&key="+getResources().getString(R.string.google_places_key));
                             String url = stringBuilder.toString();
                             Log.i("TAG", url);
@@ -126,7 +122,7 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
             MarkerOptions options = new MarkerOptions();
             options.position(current);
             options.title("Current Location");
-            mMap.addMarker(options);
+            //mMap.addMarker(options);
         }
     }
 

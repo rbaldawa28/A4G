@@ -6,6 +6,7 @@
 package com.example.petpicker;
 
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import java.util.*;
 
@@ -241,6 +242,11 @@ public class Pets {
         {
             petScores.put("Fish", petScores.get("Fish")*0.1);
         }
+        Log.i("Dog Score: ", String.valueOf(petScores.get("Dog")));
+        Log.i("Cat Score: ", String.valueOf(petScores.get("Cat")));
+        Log.i("Bird Score: ", String.valueOf(petScores.get("Bird")));
+        Log.i("Hamster Score: ", String.valueOf(petScores.get("Hamster")));
+        Log.i("Fish Score: ", String.valueOf(petScores.get("Fish")));
 
         petScores = sortByValue(petScores);
     }
