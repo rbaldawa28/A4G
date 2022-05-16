@@ -3,11 +3,13 @@ package com.example.petpicker;
 import android.Manifest;
 import android.app.Fragment;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.*;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,6 +21,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
@@ -28,7 +31,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class Map1 extends FragmentActivity implements OnMapReadyCallback, LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
@@ -36,6 +45,8 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
     GoogleApiClient client;
     LatLng current;
     MaterialButton search;
+    double lat, lng;
+    Context context = this;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -59,22 +70,44 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
     {
         SharedPreferences sp = getSharedPreferences("UserPrefs",MODE_PRIVATE);
         Pets options = new Pets(sp);
-        Location location = new Location("");
-        LatLng current = new LatLng(location.getLatitude(), location.getLatitude());
+        FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        if (ActivityCompat.checkSelfPermission(Map1.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+        {
+            fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+                @Override
+                public void onComplete(@NonNull Task<Location> task) {
+                    Location location = task.getResult();
+                    if(location != null)
+                    {
+                        Geocoder geocoder = new Geocoder(Map1.this, Locale.getDefault());
+                        try {
+                            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                            lat = addresses.get(0).getLatitude();
+                            lng = addresses.get(0).getLongitude();
+                            Log.i("TAG", String.valueOf(lat));
+                            Log.i("TAG", String.valueOf(lng));
+                            StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=");
+                            stringBuilder.append(lat+"%2C"+lng);
+                            stringBuilder.append("&radius="+50000);
+                            stringBuilder.append("&type=store");
+                            stringBuilder.append("&keyword="+options.getFirst());
+                            stringBuilder.append("&key="+getResources().getString(R.string.google_places_key));
+                            String url = stringBuilder.toString();
+                            Log.i("TAG", url);
 
-        StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
-        stringBuilder.append("location="+current.latitude+","+current.longitude);
-        stringBuilder.append("&radius="+50000);
-        stringBuilder.append("&keyword="+options.getFirst());
-        stringBuilder.append("&key"+getResources().getString(R.string.google_places_key));
-        String url = stringBuilder.toString();
+                            Object dataTransfer[] = new Object[2];
+                            dataTransfer[0] = mMap;
+                            dataTransfer[1] = url;
 
-        Object dataTransfer[] = new Object[2];
-        dataTransfer[0] = mMap;
-        dataTransfer[1] = url;
-
-        GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces(this);
-        getNearbyPlaces.execute(dataTransfer);
+                            GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces(context);
+                            getNearbyPlaces.execute(dataTransfer);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
+        }
     }
 
     @Override
@@ -85,8 +118,10 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
         else
         {
             LatLng current = new LatLng(location.getLatitude(), location.getLatitude());
+            Log.i("Tag", String.valueOf(location.getLatitude()));
+            Log.i("Tag", String.valueOf(location.getLongitude()));
             CameraUpdate update = CameraUpdateFactory.newLatLngZoom(current,15);
-            mMap.moveCamera(update);
+            //mMap.moveCamera(update);
 
             MarkerOptions options = new MarkerOptions();
             options.position(current);

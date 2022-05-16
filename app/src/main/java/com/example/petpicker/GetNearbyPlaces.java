@@ -2,6 +2,7 @@ package com.example.petpicker;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
@@ -29,9 +30,9 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
     String data;
     Context context;
 
-    public GetNearbyPlaces(Context context) {
+    public GetNearbyPlaces(Context dcontext) {
 
-        this.context = context;
+        context = dcontext;
 
     }
 
@@ -78,14 +79,16 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
                 JSONObject locationObj = jsonObject.getJSONObject("geometry").getJSONObject("location");
                 String latitude = locationObj.getString("lat");
                 String longitude = locationObj.getString("lng");
+                Log.i("LOC", latitude);
+                Log.i("LOC",longitude);
 
                 JSONObject nameObject = resultsArray.getJSONObject((i));
                 String name_pet = nameObject.getString("name");
-                String vicinity = nameObject.getString("vicinity");
+                Log.i("LOC",name_pet);
 
                 LatLng latlng = new LatLng(Double.parseDouble(latitude),Double.parseDouble(longitude));
                 MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.title(vicinity);
+                markerOptions.title(name_pet);
                 markerOptions.position(latlng);
                 mMap.addMarker(markerOptions);
             }
