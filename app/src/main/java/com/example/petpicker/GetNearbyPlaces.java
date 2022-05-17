@@ -33,10 +33,9 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
     String data;
     Context context;
 
-    public GetNearbyPlaces(Context dcontext) {
+    public GetNearbyPlaces(Context context) {
 
-        context = dcontext;
-
+        this.context = context;
     }
 
     @Override
