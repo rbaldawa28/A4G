@@ -198,11 +198,19 @@ public class Map1 extends FragmentActivity implements OnMapReadyCallback, Locati
 
     }
 
+    /**
+     * When app gets disconnected
+     * @param i
+     */
     @Override
     public void onConnectionSuspended(int i) {
 
     }
 
+    /**
+     * When app fails to connect
+     * @param connectionResult
+     */
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 

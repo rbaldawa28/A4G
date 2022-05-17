@@ -1,3 +1,9 @@
+/**
+ * Searches and displays nearby pet resources (based on current location) for the 3rd recommended pet using Google Maps.
+ * Interactive map that allows users to move around.
+ * @author rbaldawa28, amchong, ibateman
+ */
+
 package com.example.petpicker;
 
 import android.Manifest;
@@ -45,6 +51,10 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
     double lat, lng;
     Context context = this;
 
+    /**
+     * Google Map (road, street, and highway map) displayed when opened
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -55,6 +65,11 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
 
         search = (MaterialButton) findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Calls findPets method (searches for local animal resources) when search button is pressed
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 findPets(v);
@@ -62,6 +77,7 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
         });
 
     }
+
 
     public void findPets(View v)
     {
@@ -71,6 +87,11 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
         if (ActivityCompat.checkSelfPermission(Map3.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
         {
             fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+
+                /**
+                 * Utilizes user specified radius and current location to search for the 3rd recommended pet locations
+                 * @param task
+                 */
                 @Override
                 public void onComplete(@NonNull Task<Location> task) {
                     Location location = task.getResult();
@@ -114,6 +135,10 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
         }
     }
 
+    /**
+     * Updates current location when moved
+     * @param location
+     */
     @Override
     public void onLocationChanged(@NonNull Location location) {
         if(location == null){
@@ -132,6 +157,10 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
         }
     }
 
+    /**
+     * Connects to Google API
+     * @param googleMap
+     */
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
@@ -141,6 +170,10 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
         client.connect();
     }
 
+    /**
+     * Asks for user permission to use location
+     * @param bundle
+     */
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         LocationRequest request = new LocationRequest().create();
@@ -161,11 +194,19 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
 
     }
 
+    /**
+     * When app gets disconnected
+     * @param i
+     */
     @Override
     public void onConnectionSuspended(int i) {
 
     }
 
+    /**
+     * When app fails to connect
+     * @param connectionResult
+     */
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
