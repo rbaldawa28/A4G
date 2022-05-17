@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.location.*;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -97,8 +98,14 @@ public class Map5 extends FragmentActivity implements OnMapReadyCallback, Locati
                             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
                             lat = addresses.get(0).getLatitude();
                             lng = addresses.get(0).getLongitude();
-                            Log.i("TAG", String.valueOf(lat));
-                            Log.i("TAG", String.valueOf(lng));
+                            double radius = 50000; //max search radius of google maps ~31 miles
+                            EditText radiusT = findViewById(R.id.radius);
+                            if(!radiusT.getText().toString().equals(""))
+                            {
+                                radius = Integer.parseInt(radiusT.getText().toString());
+                                radius *= 1609;
+                            }
+
                             StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=");
                             stringBuilder.append(lat+"%2C"+lng);
                             stringBuilder.append("&radius="+50000);
@@ -108,9 +115,10 @@ public class Map5 extends FragmentActivity implements OnMapReadyCallback, Locati
                             String url = stringBuilder.toString();
                             Log.i("TAG", url);
 
-                            Object dataTransfer[] = new Object[2];
+                            Object dataTransfer[] = new Object[3];
                             dataTransfer[0] = mMap;
                             dataTransfer[1] = url;
+                            dataTransfer[2] = radius;
 
                             GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces(context);
                             getNearbyPlaces.execute(dataTransfer);
@@ -131,8 +139,6 @@ public class Map5 extends FragmentActivity implements OnMapReadyCallback, Locati
         else
         {
             LatLng current = new LatLng(location.getLatitude(), location.getLatitude());
-            Log.i("Tag", String.valueOf(location.getLatitude()));
-            Log.i("Tag", String.valueOf(location.getLongitude()));
             CameraUpdate update = CameraUpdateFactory.newLatLngZoom(current,15);
             //mMap.moveCamera(update);
 

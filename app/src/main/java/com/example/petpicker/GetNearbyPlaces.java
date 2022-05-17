@@ -26,6 +26,7 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
 {
     GoogleMap mMap;
     String url;
+    double radius;
     InputStream is;
     BufferedReader bufferedReader;
     StringBuilder stringBuilder;
@@ -42,6 +43,7 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
     protected String doInBackground(Object... params) {
         mMap = (GoogleMap) params[0];
         url = (String) params[1];
+        radius = (Double) params[2];
 
         try {
             URL myUrl = new URL(url);
@@ -74,7 +76,7 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
         try {
             JSONObject parentObject = new JSONObject(s);
             JSONArray resultsArray = parentObject.getJSONArray("results");
-
+            mMap.clear();
             for(int i = 0; i < resultsArray.length(); i++)
             {
                 JSONObject jsonObject = resultsArray.getJSONObject(i);
@@ -87,14 +89,16 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
                 Log.i("LOC",name_pet);
 
                 LatLng latlng = new LatLng(Double.parseDouble(latitude),Double.parseDouble(longitude));
-                CameraUpdate update = CameraUpdateFactory.newLatLngZoom(latlng,9);
-                mMap.moveCamera(update);
+                if(i == 0)
+                {
+                    CameraUpdate update = CameraUpdateFactory.newLatLngZoom(latlng, (float) (-0.00002125*radius+11.5));
+                    mMap.moveCamera(update);
+                }
 
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.title(name_pet + ": " + nameObject.getString("vicinity"));
                 markerOptions.position(latlng);
                 mMap.addMarker(markerOptions);
-
             }
         } catch (JSONException e) {
             e.printStackTrace();
