@@ -1,3 +1,8 @@
+/**
+ * Determines the location (latitude and longitude) of pet resources within a certain (specified) radius
+ * @author rbaldawa28, amchong, ibateman
+ */
+
 package com.example.petpicker;
 
 import android.content.Context;
@@ -33,11 +38,20 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
     String data;
     Context context;
 
+    /**
+     * Constructs a Context object
+     * @param context
+     */
     public GetNearbyPlaces(Context context) {
 
         this.context = context;
     }
 
+    /**
+     * Searches for pet resource locations based on user specified parameters (radius) and the recommended pet
+     * @param params
+     * @return
+     */
     @Override
     protected String doInBackground(Object... params) {
         mMap = (GoogleMap) params[0];
@@ -70,6 +84,10 @@ public class GetNearbyPlaces extends AsyncTask<Object,String,String>
         return data;
     }
 
+    /**
+     * Gets latitude and longitude of nearby resources and displays the resource name and location with marker
+     * @param s
+     */
     @Override
     protected void onPostExecute(String s) {
         try {
