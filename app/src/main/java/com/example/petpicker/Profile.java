@@ -30,9 +30,9 @@ public class Profile extends AppCompatActivity{
     CheckBox dog, cat, bird, hamster, fish;
 
     /**
-     * Submit/save user information button
+     * Submit/save user information button and viewMaps button
      */
-    MaterialButton submit;
+    MaterialButton submit, viewOptions;
 
     /**
      * Returns to the Home (homepage) when the back button on the device is pressed
@@ -57,11 +57,22 @@ public class Profile extends AppCompatActivity{
         householdSize = findViewById(R.id.householdSize);
         time = findViewById(R.id.timeAtHome);
         submit = findViewById(R.id.submit);
+        viewOptions = findViewById(R.id.viewOptions);
         dog = findViewById(R.id.dog);
         cat = findViewById(R.id.cat);
         bird = findViewById(R.id.bird);
         hamster = findViewById(R.id.hamster);
         fish = findViewById(R.id.fish);
+
+        /**
+         * Opens options page with ordered pet ranking
+         */
+        viewOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openOptions();
+            }
+        });
 
 
 /**
@@ -110,6 +121,15 @@ public class Profile extends AppCompatActivity{
         hamster.setChecked(sp.getBoolean("HamsterP",false));
         fish.setChecked(sp.getBoolean("FishP",false));
 
+    }
+
+    /**
+     * Method to open options class
+     */
+    public void openOptions()
+    {
+        Intent intent = new Intent(this, Options.class);
+        startActivity(intent);
     }
 
 }

@@ -25,18 +25,6 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         /**
-         * Calls openThirdActivity to open the recommended pet page from homepage when the recommended pets button is clicked
-         */
-        MaterialButton petbtn = (MaterialButton) findViewById(R.id.viewPets);
-        petbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openThirdActivity();
-            }
-        });
-
-
-        /**
         * Calls openSecondActivity to open the profile page from homepage when the profile page button is clicked
         */
         MaterialButton profilebtn = (MaterialButton) findViewById(R.id.editProfile);
@@ -64,14 +52,6 @@ public class Home extends AppCompatActivity {
      */
     public void openSecondActivity(){
         Intent intent = new Intent(this, Profile.class);
-        startActivity(intent);
-    }
-
-    /**
-     * Opens recommended pets page
-     */
-    public void openThirdActivity(){
-        Intent intent = new Intent(this, Options.class);
         startActivity(intent);
     }
 

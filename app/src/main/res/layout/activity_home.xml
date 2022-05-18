@@ -24,8 +24,8 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/editProfile"
         android:layout_width="400dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="370dp"
         android:backgroundTint="#95a2f1"
         android:text="Edit Profile"
         android:textSize="40sp"
@@ -35,22 +35,9 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/viewPets"
-        android:layout_width="400dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#95a2f1"
-        android:text="View Pets"
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editProfile" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/AbOurApp"
         android:layout_width="400dp"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#95a2f1"
         android:text="@string/AboutOurApp"
@@ -58,7 +45,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPets" />
+        app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
     <ImageView
         android:id="@+id/imageView4"

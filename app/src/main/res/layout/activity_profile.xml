@@ -247,7 +247,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/submit"
-        android:layout_marginTop="740dp"
+        android:layout_marginTop="700dp"
         android:text="@string/submit"
         android:textColor="@color/black"
         android:layout_width="400dp"
@@ -257,6 +257,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewOptions"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#95a2f1"
+        android:text="View Options"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
