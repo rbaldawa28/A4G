@@ -134,7 +134,7 @@ public class Map5 extends FragmentActivity implements OnMapReadyCallback, Locati
                             stringBuilder.append(lat+"%2C"+lng);
                             stringBuilder.append("&radius="+50000);
                             stringBuilder.append("&type=store");
-                            stringBuilder.append("&keyword=pet"+options.getFirst());
+                            stringBuilder.append("&keyword=pet"+options.getFifth());
                             stringBuilder.append("&key="+getResources().getString(R.string.google_places_key));
                             String url = stringBuilder.toString();
                             Log.i("TAG", url);

@@ -114,7 +114,7 @@ public class Map3 extends FragmentActivity implements OnMapReadyCallback, Locati
                             stringBuilder.append(lat+"%2C"+lng);
                             stringBuilder.append("&radius="+radius);
                             stringBuilder.append("&type=store");
-                            stringBuilder.append("&keyword=pet"+options.getFirst());
+                            stringBuilder.append("&keyword=pet"+options.getThird());
                             stringBuilder.append("&key="+getResources().getString(R.string.google_places_key));
                             String url = stringBuilder.toString();
                             Log.i("TAG", url);
